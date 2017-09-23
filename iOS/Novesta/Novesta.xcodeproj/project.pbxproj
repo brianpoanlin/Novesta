@@ -21,9 +21,10 @@
 		AF0A5C651F76AFCA00E808D6 /* Novesta_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF0A5C631F76AFCA00E808D6 /* Novesta_TableViewCell.xib */; };
 		AF345BDE1F76C27900589180 /* bitcoin.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BDC1F76C18800589180 /* bitcoin.png */; };
 		AF345BE01F76C47F00589180 /* novesta_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BDF1F76C47B00589180 /* novesta_logo.png */; };
-		AF345BE21F76CB8000589180 /* darrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BE11F76CB5700589180 /* darrow.png */; };
 		AF345BE41F76CBEC00589180 /* novesta_logo_highquality.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BE31F76CBE900589180 /* novesta_logo_highquality.png */; };
 		AF345BE61F76CF0300589180 /* Market_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF345BE51F76CF0300589180 /* Market_ViewController.swift */; };
+		AF345BE91F76D15A00589180 /* darrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BE81F76CFA000589180 /* darrow.png */; };
+		AF345BEA1F76D15C00589180 /* uarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BE71F76CF9F00589180 /* uarrow.png */; };
 		EFCD006801C0F3A94402B8AA /* Pods_NovestaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A05AA507C5639E6BB0A0A22 /* Pods_NovestaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,9 +72,10 @@
 		AF0A5C631F76AFCA00E808D6 /* Novesta_TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Novesta_TableViewCell.xib; sourceTree = "<group>"; };
 		AF345BDC1F76C18800589180 /* bitcoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bitcoin.png; sourceTree = "<group>"; };
 		AF345BDF1F76C47B00589180 /* novesta_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_logo.png; path = ../../../../Res/Logo/novesta_logo.png; sourceTree = "<group>"; };
-		AF345BE11F76CB5700589180 /* darrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = darrow.png; path = ../../../../Res/Logo/darrow.png; sourceTree = "<group>"; };
 		AF345BE31F76CBE900589180 /* novesta_logo_highquality.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_logo_highquality.png; path = ../../../../Res/Logo/novesta_logo_highquality.png; sourceTree = "<group>"; };
 		AF345BE51F76CF0300589180 /* Market_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market_ViewController.swift; sourceTree = "<group>"; };
+		AF345BE71F76CF9F00589180 /* uarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = uarrow.png; path = ../../../../Res/Logo/uarrow.png; sourceTree = "<group>"; };
+		AF345BE81F76CFA000589180 /* darrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = darrow.png; path = ../../../../Res/Logo/darrow.png; sourceTree = "<group>"; };
 		DAA110008354D85870A3A14F /* Pods-NovestaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovestaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NovestaTests/Pods-NovestaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,7 +168,8 @@
 		AF0A5C661F76BB7600E808D6 /* img_res */ = {
 			isa = PBXGroup;
 			children = (
-				AF345BE11F76CB5700589180 /* darrow.png */,
+				AF345BE81F76CFA000589180 /* darrow.png */,
+				AF345BE71F76CF9F00589180 /* uarrow.png */,
 				AF345BE31F76CBE900589180 /* novesta_logo_highquality.png */,
 				AF345BDF1F76C47B00589180 /* novesta_logo.png */,
 				AF345BDC1F76C18800589180 /* bitcoin.png */,
@@ -313,12 +316,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF345BE91F76D15A00589180 /* darrow.png in Resources */,
 				AF345BE01F76C47F00589180 /* novesta_logo.png in Resources */,
 				AF345BE41F76CBEC00589180 /* novesta_logo_highquality.png in Resources */,
+				AF345BEA1F76D15C00589180 /* uarrow.png in Resources */,
 				AF345BDE1F76C27900589180 /* bitcoin.png in Resources */,
 				AF0A5C371F7631A300E808D6 /* LaunchScreen.storyboard in Resources */,
 				AF0A5C651F76AFCA00E808D6 /* Novesta_TableViewCell.xib in Resources */,
-				AF345BE21F76CB8000589180 /* darrow.png in Resources */,
 				AF0A5C5D1F76335A00E808D6 /* GoogleService-Info.plist in Resources */,
 				AF0A5C341F7631A300E808D6 /* Assets.xcassets in Resources */,
 				AF0A5C321F7631A300E808D6 /* Main.storyboard in Resources */,

@@ -83,9 +83,24 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "cryp", for: indexPath) as! cryp_tbl_view_cell
         cell.selectionStyle = .none
         let currentEvent = cryp_loc_list[indexPath.row]
+        
+        let value_pars = currentEvent.value(forKey: "cryp_value") as? String
+        let value_float = Double(value_pars!)
+        
+        var arrow_dir = ""
+        
+        if (Double(value_float!) > 0) {
+            print("POSITIVE CHANGE")
+            arrow_dir = "uarrow.png"
+        }
+        else {
+            print("NEGATIVE CHANGE")
+            arrow_dir = "darrow.png"
+        }
+        
         var imgName = "bitcoin"
         cell.cryp_name.text = currentEvent.value(forKey: "cryp_name") as? String
-        cell.cryp_flunc_logo.image = UIImage(named: "darrow.png")
+        cell.cryp_flunc_logo.image = UIImage(named: arrow_dir)
         cell.cryp_flunc_value.text = currentEvent.value(forKey: "cryp_value") as? String
         cell.cryp_logo.image = UIImage(named: "\(imgName).png")
         cell.backgroundColor = UIColor.clear
