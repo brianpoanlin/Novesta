@@ -56,7 +56,7 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
                 for child in snapshot.children.allObjects as? [DataSnapshot] ?? []{
                     
                     let crypDataSimp: [String: AnyObject] =  ["cryp_name":child.childSnapshot(forPath: "name").value as! String as AnyObject,
-                                                              "cryp_percent_change_24h":child.childSnapshot(forPath: "percent_change_24h").value as! String as AnyObject]
+                                                              "cryp_value":child.childSnapshot(forPath: "percent_change_24h").value as! String as AnyObject]
                     
                     self.cryp_loc_list.append(crypDataSimp as NSDictionary)
                     self.tableView.reloadData()
@@ -85,8 +85,8 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         let currentEvent = cryp_loc_list[indexPath.row]
         var imgName = "bitcoin"
         cell.cryp_name.text = currentEvent.value(forKey: "cryp_name") as? String
-        cell.cryp_flunc_logo.image = UIImage(named: "\(imgName).png")
-        cell.cryp_flunc_value.text = currentEvent.value(forKey: "percent_change_24h") as? String
+        cell.cryp_flunc_logo.image = UIImage(named: "darrow.png")
+        cell.cryp_flunc_value.text = currentEvent.value(forKey: "cryp_value") as? String
         cell.cryp_logo.image = UIImage(named: "\(imgName).png")
         cell.backgroundColor = UIColor.clear
         self.tableView.rowHeight = 90.0
