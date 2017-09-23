@@ -99,9 +99,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p32-6O-TOx">
-                                <rect key="frame" x="0.0" y="97" width="375" height="570"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p32-6O-TOx">
+                                <rect key="frame" x="0.0" y="299" width="375" height="368"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.49610319730000002" green="0.9070411921" blue="0.51760840419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
@@ -109,8 +108,72 @@
                                     <outlet property="delegate" destination="Tf3-20-8oj" id="yhk-If-B8x"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ns-jH-q9u">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="novesta_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="vTH-0K-W52">
+                                        <rect key="frame" x="110" y="0.0" width="154" height="136"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="136" id="0mM-l9-auY"/>
+                                            <constraint firstAttribute="width" constant="154" id="g50-LP-q19"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.75686274509999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="vTH-0K-W52" firstAttribute="centerX" secondItem="2Ns-jH-q9u" secondAttribute="centerX" id="Ows-QF-zcw"/>
+                                    <constraint firstAttribute="height" constant="110" id="l3q-Ry-a6W"/>
+                                    <constraint firstItem="vTH-0K-W52" firstAttribute="top" secondItem="2Ns-jH-q9u" secondAttribute="top" id="mFL-HR-wOr"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brian's Portfolio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEG-2b-oJ1">
+                                <rect key="frame" x="10" y="145" width="349" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Gmq-fG-ihg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.75686274509999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400.365" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bZ-G9-7qi">
+                                <rect key="frame" x="0.0" y="174" width="375" height="76"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.75686274509999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="ybb-hz-eS6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Crypto Market" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnk-py-CIY">
+                                <rect key="frame" x="10" y="270" width="355" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="tJy-du-BOv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.75686274509999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Ns-jH-q9u" firstAttribute="top" secondItem="lKN-fa-pOR" secondAttribute="top" id="5SH-mC-bDJ"/>
+                            <constraint firstItem="p32-6O-TOx" firstAttribute="bottom" secondItem="oNI-wa-9dT" secondAttribute="bottom" id="7en-tV-f3I"/>
+                            <constraint firstItem="BEG-2b-oJ1" firstAttribute="leading" secondItem="oNI-wa-9dT" secondAttribute="leading" constant="10" id="BEH-7O-5QX"/>
+                            <constraint firstItem="6bZ-G9-7qi" firstAttribute="top" secondItem="BEG-2b-oJ1" secondAttribute="bottom" constant="8" id="J5W-DV-IR6"/>
+                            <constraint firstItem="BEG-2b-oJ1" firstAttribute="top" secondItem="2Ns-jH-q9u" secondAttribute="bottom" constant="35" id="QNw-w9-EyL"/>
+                            <constraint firstItem="p32-6O-TOx" firstAttribute="trailing" secondItem="oNI-wa-9dT" secondAttribute="trailing" id="Si5-ht-c0y"/>
+                            <constraint firstItem="p32-6O-TOx" firstAttribute="top" secondItem="Gnk-py-CIY" secondAttribute="bottom" constant="8" id="TIO-9D-oNb"/>
+                            <constraint firstItem="Gnk-py-CIY" firstAttribute="top" secondItem="6bZ-G9-7qi" secondAttribute="bottom" constant="20" id="bee-il-3OG"/>
+                            <constraint firstItem="oNI-wa-9dT" firstAttribute="trailing" secondItem="BEG-2b-oJ1" secondAttribute="trailing" constant="16" id="d88-hU-BrY"/>
+                            <constraint firstItem="oNI-wa-9dT" firstAttribute="trailing" secondItem="Gnk-py-CIY" secondAttribute="trailing" constant="10" id="exY-JP-Lzs"/>
+                            <constraint firstItem="Gnk-py-CIY" firstAttribute="leading" secondItem="oNI-wa-9dT" secondAttribute="leading" constant="10" id="hW8-di-dLo"/>
+                            <constraint firstItem="2Ns-jH-q9u" firstAttribute="leading" secondItem="oNI-wa-9dT" secondAttribute="leading" id="iPq-Q1-cpR"/>
+                            <constraint firstItem="2Ns-jH-q9u" firstAttribute="trailing" secondItem="oNI-wa-9dT" secondAttribute="trailing" id="vbF-dg-Lgo"/>
+                            <constraint firstItem="p32-6O-TOx" firstAttribute="leading" secondItem="oNI-wa-9dT" secondAttribute="leading" id="wVI-CG-syK"/>
+                            <constraint firstItem="6bZ-G9-7qi" firstAttribute="leading" secondItem="oNI-wa-9dT" secondAttribute="leading" id="z9S-mF-bHE"/>
+                            <constraint firstItem="6bZ-G9-7qi" firstAttribute="trailing" secondItem="oNI-wa-9dT" secondAttribute="trailing" id="zhY-x0-Tyx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oNI-wa-9dT"/>
                     </view>
                     <connections>
@@ -122,4 +185,7 @@
             <point key="canvasLocation" x="1349.5999999999999" y="32.833583208395808"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="novesta_logo.png" width="2048" height="2048"/>
+    </resources>
 </document>

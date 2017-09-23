@@ -34,10 +34,15 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Do any additional setup after loading the view.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    
     func setUpDataBase (){
         let creationPath = Database.database().reference(withPath: "master_crypto").childByAutoId()
         
-        let newNovestData:[String: AnyObject] = ["cryp_name":"Google" as AnyObject, "cryp_value":"10.202" as AnyObject]
+        let newNovestData:[String: AnyObject] = ["cryp_name":"Google" as AnyObject, "cryp_value":"20.405" as AnyObject]
         
         creationPath.setValue(newNovestData)
         print("NEW DATA SENT")
@@ -45,13 +50,13 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     func pullData(){
-        crypRef.queryOrdered(byChild: "master-crypto")
+        crypRef.queryOrdered(byChild: "master_crypto")
             .observeSingleEvent(of: .value, with: { snapshot in
                 
                 for child in snapshot.children.allObjects as? [DataSnapshot] ?? []{
                     
-                    let crypDataSimp: [String: AnyObject] =  ["cryp_name":child.childSnapshot(forPath: "cryp_name").value as! String as AnyObject,
-                                                              "cryp_value":child.childSnapshot(forPath: "cryp_value").value as! String as AnyObject]
+                    let crypDataSimp: [String: AnyObject] =  ["cryp_name":child.childSnapshot(forPath: "name").value as! String as AnyObject,
+                                                              "cryp_percent_change_24h":child.childSnapshot(forPath: "percent_change_24h").value as! String as AnyObject]
                     
                     self.cryp_loc_list.append(crypDataSimp as NSDictionary)
                     self.tableView.reloadData()
@@ -81,7 +86,7 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         var imgName = "bitcoin"
         cell.cryp_name.text = currentEvent.value(forKey: "cryp_name") as? String
         cell.cryp_flunc_logo.image = UIImage(named: "\(imgName).png")
-        cell.cryp_flunc_value.text = currentEvent.value(forKey: "cryp_value") as? String
+        cell.cryp_flunc_value.text = currentEvent.value(forKey: "percent_change_24h") as? String
         cell.cryp_logo.image = UIImage(named: "\(imgName).png")
         cell.backgroundColor = UIColor.clear
         self.tableView.rowHeight = 90.0
