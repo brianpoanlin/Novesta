@@ -86,10 +86,12 @@
                         <outlet property="signInButton" destination="eFw-3Y-87V" id="hYc-zm-flb"/>
                         <outlet property="userNameTF" destination="Yyg-B0-8Z1" id="VSk-Ee-24a"/>
                         <segue destination="Tf3-20-8oj" kind="show" identifier="toMain" id="bLU-6p-AUQ"/>
+                        <segue destination="tJx-ac-lUT" kind="show" identifier="toMain" id="WgJ-Me-4xC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="690" y="30"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="LQF-AL-kVu">
@@ -126,7 +128,7 @@
                                     <constraint firstItem="vTH-0K-W52" firstAttribute="top" secondItem="2Ns-jH-q9u" secondAttribute="top" constant="26" id="mFL-HR-wOr"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brian's Portfolio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEG-2b-oJ1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Portfolio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEG-2b-oJ1">
                                 <rect key="frame" x="10" y="145" width="349" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Gmq-fG-ihg"/>
@@ -145,7 +147,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Crypto Market" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnk-py-CIY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Crypto Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnk-py-CIY">
                                 <rect key="frame" x="10" y="270" width="355" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="tJy-du-BOv"/>
@@ -156,6 +158,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="2Ns-jH-q9u" firstAttribute="top" secondItem="lKN-fa-pOR" secondAttribute="top" id="5SH-mC-bDJ"/>
                             <constraint firstItem="p32-6O-TOx" firstAttribute="bottom" secondItem="oNI-wa-9dT" secondAttribute="bottom" id="7en-tV-f3I"/>
@@ -175,12 +178,22 @@
                             <constraint firstItem="6bZ-G9-7qi" firstAttribute="trailing" secondItem="oNI-wa-9dT" secondAttribute="trailing" id="zhY-x0-Tyx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oNI-wa-9dT"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bPG-VV-6UI" appends="YES" id="X2W-tB-akv"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="portfolioWorth" destination="6bZ-G9-7qi" id="tbO-Uj-aLP"/>
                         <outlet property="tableView" destination="p32-6O-TOx" id="fiB-Rr-CEf"/>
+                        <segue destination="tJx-ac-lUT" kind="show" identifier="main_to_market" customClass="Animated_Right" customModule="Novesta" customModuleProvider="target" id="47N-l5-DTd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Zz-lZ-Uur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="bPG-VV-6UI">
+                    <connections>
+                        <action selector="swiped_left:" destination="Tf3-20-8oj" id="dnh-cK-eUt"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1349.5999999999999" y="32.833583208395808"/>
         </scene>
@@ -191,16 +204,84 @@
                     <view key="view" contentMode="scaleToFill" id="dhG-HL-ITk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J1h-G2-Kdx">
+                                <rect key="frame" x="0.0" y="159" width="375" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.49610319730000002" green="0.9070411921" blue="0.51760840419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tJx-ac-lUT" id="8KZ-S0-Xkh"/>
+                                    <outlet property="delegate" destination="tJx-ac-lUT" id="iPK-MP-EjM"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8NU-ga-btP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="novesta_logo_highquality.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cjb-Sr-Lqk">
+                                        <rect key="frame" x="144" y="26" width="86" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="76" id="YkD-qy-YZp"/>
+                                            <constraint firstAttribute="width" constant="86" id="oLP-KH-vxm"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.75686274509999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Cjb-Sr-Lqk" firstAttribute="top" secondItem="8NU-ga-btP" secondAttribute="top" constant="26" id="Q5y-PE-bqW"/>
+                                    <constraint firstItem="Cjb-Sr-Lqk" firstAttribute="centerX" secondItem="8NU-ga-btP" secondAttribute="centerX" id="bRW-dX-xTI"/>
+                                    <constraint firstAttribute="height" constant="110" id="w8G-sF-43t"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Market" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob2-1z-yJW">
+                                <rect key="frame" x="129.5" y="130" width="116" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="lpE-bq-qv9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.75686274509999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="J1h-G2-Kdx" firstAttribute="bottom" secondItem="nnZ-SC-CSN" secondAttribute="bottom" id="6B7-wZ-dPh"/>
+                            <constraint firstItem="J1h-G2-Kdx" firstAttribute="top" secondItem="Ob2-1z-yJW" secondAttribute="bottom" constant="8" id="7zx-rH-XSx"/>
+                            <constraint firstItem="Ob2-1z-yJW" firstAttribute="top" secondItem="8NU-ga-btP" secondAttribute="bottom" constant="20" id="B24-em-cpW"/>
+                            <constraint firstItem="8NU-ga-btP" firstAttribute="top" secondItem="dhG-HL-ITk" secondAttribute="top" id="CiN-qR-Neu"/>
+                            <constraint firstAttribute="trailing" secondItem="8NU-ga-btP" secondAttribute="trailing" id="OcC-Oi-9PU"/>
+                            <constraint firstItem="8NU-ga-btP" firstAttribute="leading" secondItem="dhG-HL-ITk" secondAttribute="leading" id="Y2A-H4-CAI"/>
+                            <constraint firstItem="8NU-ga-btP" firstAttribute="centerX" secondItem="Ob2-1z-yJW" secondAttribute="centerX" id="aTg-sw-fr0"/>
+                            <constraint firstItem="J1h-G2-Kdx" firstAttribute="leading" secondItem="nnZ-SC-CSN" secondAttribute="leading" id="cmP-hP-oCw"/>
+                            <constraint firstItem="J1h-G2-Kdx" firstAttribute="trailing" secondItem="nnZ-SC-CSN" secondAttribute="trailing" id="eqC-83-sBR"/>
+                            <constraint firstItem="8NU-ga-btP" firstAttribute="trailing" secondItem="J1h-G2-Kdx" secondAttribute="trailing" id="icn-IV-bMP"/>
+                            <constraint firstItem="8NU-ga-btP" firstAttribute="leading" secondItem="J1h-G2-Kdx" secondAttribute="leading" id="niY-hV-OUw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nnZ-SC-CSN"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8rT-qr-gMR" appends="YES" id="eZR-DO-sBT"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="J1h-G2-Kdx" id="mC9-Wl-oVZ"/>
+                        <segue destination="Tf3-20-8oj" kind="show" identifier="market_to_main" customClass="Animated" customModule="Novesta" customModuleProvider="target" id="Yoq-bs-PZP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Jy-Zb-Ocf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="8rT-qr-gMR">
+                    <connections>
+                        <action selector="swipeToMain:" destination="tJx-ac-lUT" id="nxO-ES-MLW"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2222" y="31"/>
+            <point key="canvasLocation" x="2221.5999999999999" y="30.134932533733135"/>
         </scene>
     </scenes>
     <resources>
         <image name="novesta_logo_highquality.png" width="1024" height="1024"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="47N-l5-DTd"/>
+        <segue reference="bLU-6p-AUQ"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -19,8 +19,7 @@ class LogIn_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        try! Auth.auth().signOut()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,14 +29,11 @@ class LogIn_ViewController: UIViewController {
         if Auth.auth().currentUser != nil {
             print("user is signed in")
             let UID = Auth.auth().currentUser?.uid
-            
-            
             let newPth = Database.database().reference(withPath: "users").child(UID!)
             universalUserID = UID!
             
             print(newPth)
             
-            newPth.child("user_name").setValue("Brian")
             
             self.performSegue(withIdentifier: "toMain", sender: nil)
             
@@ -73,6 +69,9 @@ class LogIn_ViewController: UIViewController {
                 let newPth = Database.database().reference(withPath: "users").child((user?.uid)!)
                 
                 universalUserID = (user?.uid)!
+                
+                newPth.child("user_name").setValue("Brian")
+
                 
                 self.performSegue(withIdentifier: "toMain", sender: nil)
             }
