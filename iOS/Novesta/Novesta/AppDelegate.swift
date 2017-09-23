@@ -2,11 +2,14 @@
 //  AppDelegate.swift
 //  Novesta
 //
-//  Created by Brian Lin on 9/22/17.
+//  Created by Brian Lin on 9/23/17.
 //  Copyright © 2017 Brian Lin. All rights reserved.
 //
 
 import UIKit
+import Firebase
+
+var universalUserID=""
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+
         return true
     }
 
