@@ -7,134 +7,180 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AFA3C25B1F76130400009C4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3C25A1F76130400009C4D /* AppDelegate.swift */; };
-		AFA3C25D1F76130400009C4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3C25C1F76130400009C4D /* ViewController.swift */; };
-		AFA3C2601F76130400009C4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA3C25E1F76130400009C4D /* Main.storyboard */; };
-		AFA3C2621F76130400009C4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA3C2611F76130400009C4D /* Assets.xcassets */; };
-		AFA3C2651F76130400009C4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA3C2631F76130400009C4D /* LaunchScreen.storyboard */; };
-		AFA3C2701F76130400009C4D /* NovestaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3C26F1F76130400009C4D /* NovestaTests.swift */; };
-		AFA3C27B1F76130400009C4D /* NovestaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3C27A1F76130400009C4D /* NovestaUITests.swift */; };
+		4D0D67660D737D773FF54094 /* Pods_NovestaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B911E795D218EEA336A3CAB /* Pods_NovestaUITests.framework */; };
+		AB2EA97E7551E9C70D14923F /* Pods_Novesta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A426FBEFC7EBD162744E8C39 /* Pods_Novesta.framework */; };
+		AF0A5C2D1F7631A300E808D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A5C2C1F7631A300E808D6 /* AppDelegate.swift */; };
+		AF0A5C321F7631A300E808D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0A5C301F7631A300E808D6 /* Main.storyboard */; };
+		AF0A5C341F7631A300E808D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0A5C331F7631A300E808D6 /* Assets.xcassets */; };
+		AF0A5C371F7631A300E808D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0A5C351F7631A300E808D6 /* LaunchScreen.storyboard */; };
+		AF0A5C421F7631A300E808D6 /* NovestaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A5C411F7631A300E808D6 /* NovestaTests.swift */; };
+		AF0A5C4D1F7631A300E808D6 /* NovestaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A5C4C1F7631A300E808D6 /* NovestaUITests.swift */; };
+		AF0A5C5D1F76335A00E808D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF0A5C5C1F7632FD00E808D6 /* GoogleService-Info.plist */; };
+		AF0A5C5F1F7633C200E808D6 /* LogIn_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A5C5E1F7633C200E808D6 /* LogIn_ViewController.swift */; };
+		EFCD006801C0F3A94402B8AA /* Pods_NovestaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A05AA507C5639E6BB0A0A22 /* Pods_NovestaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AFA3C26C1F76130400009C4D /* PBXContainerItemProxy */ = {
+		AF0A5C3E1F7631A300E808D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AFA3C24F1F76130400009C4D /* Project object */;
+			containerPortal = AF0A5C211F7631A300E808D6 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AFA3C2561F76130400009C4D;
+			remoteGlobalIDString = AF0A5C281F7631A300E808D6;
 			remoteInfo = Novesta;
 		};
-		AFA3C2771F76130400009C4D /* PBXContainerItemProxy */ = {
+		AF0A5C491F7631A300E808D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AFA3C24F1F76130400009C4D /* Project object */;
+			containerPortal = AF0A5C211F7631A300E808D6 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AFA3C2561F76130400009C4D;
+			remoteGlobalIDString = AF0A5C281F7631A300E808D6;
 			remoteInfo = Novesta;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AFA3C2571F76130400009C4D /* Novesta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Novesta.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFA3C25A1F76130400009C4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFA3C25C1F76130400009C4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AFA3C25F1F76130400009C4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AFA3C2611F76130400009C4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AFA3C2641F76130400009C4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AFA3C2661F76130400009C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFA3C26B1F76130400009C4D /* NovestaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovestaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFA3C26F1F76130400009C4D /* NovestaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovestaTests.swift; sourceTree = "<group>"; };
-		AFA3C2711F76130400009C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFA3C2761F76130400009C4D /* NovestaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovestaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFA3C27A1F76130400009C4D /* NovestaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovestaUITests.swift; sourceTree = "<group>"; };
-		AFA3C27C1F76130400009C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A05AA507C5639E6BB0A0A22 /* Pods_NovestaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NovestaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B911E795D218EEA336A3CAB /* Pods_NovestaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NovestaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FC44E1E6B330163361C180A /* Pods-NovestaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovestaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NovestaUITests/Pods-NovestaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1FF7B08897AF07BFB97A194D /* Pods-NovestaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovestaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NovestaUITests/Pods-NovestaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		71CC6D6CDBF950C6529F0DF2 /* Pods-Novesta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Novesta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Novesta/Pods-Novesta.release.xcconfig"; sourceTree = "<group>"; };
+		9F4C283DFC69B7A0D216E8BC /* Pods-Novesta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Novesta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Novesta/Pods-Novesta.debug.xcconfig"; sourceTree = "<group>"; };
+		A426FBEFC7EBD162744E8C39 /* Pods_Novesta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Novesta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0AD767977EC77989A18745 /* Pods-NovestaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovestaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NovestaTests/Pods-NovestaTests.release.xcconfig"; sourceTree = "<group>"; };
+		AF0A5C291F7631A300E808D6 /* Novesta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Novesta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0A5C2C1F7631A300E808D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF0A5C311F7631A300E808D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF0A5C331F7631A300E808D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF0A5C361F7631A300E808D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF0A5C381F7631A300E808D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF0A5C3D1F7631A300E808D6 /* NovestaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovestaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0A5C411F7631A300E808D6 /* NovestaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovestaTests.swift; sourceTree = "<group>"; };
+		AF0A5C431F7631A300E808D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF0A5C481F7631A300E808D6 /* NovestaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovestaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0A5C4C1F7631A300E808D6 /* NovestaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovestaUITests.swift; sourceTree = "<group>"; };
+		AF0A5C4E1F7631A300E808D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF0A5C5C1F7632FD00E808D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF0A5C5E1F7633C200E808D6 /* LogIn_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn_ViewController.swift; sourceTree = "<group>"; };
+		DAA110008354D85870A3A14F /* Pods-NovestaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovestaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NovestaTests/Pods-NovestaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AFA3C2541F76130400009C4D /* Frameworks */ = {
+		AF0A5C261F7631A300E808D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2EA97E7551E9C70D14923F /* Pods_Novesta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFA3C2681F76130400009C4D /* Frameworks */ = {
+		AF0A5C3A1F7631A300E808D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCD006801C0F3A94402B8AA /* Pods_NovestaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFA3C2731F76130400009C4D /* Frameworks */ = {
+		AF0A5C451F7631A300E808D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0D67660D737D773FF54094 /* Pods_NovestaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AFA3C24E1F76130400009C4D = {
+		AF0A5C201F7631A300E808D6 = {
 			isa = PBXGroup;
 			children = (
-				AFA3C2591F76130400009C4D /* Novesta */,
-				AFA3C26E1F76130400009C4D /* NovestaTests */,
-				AFA3C2791F76130400009C4D /* NovestaUITests */,
-				AFA3C2581F76130400009C4D /* Products */,
+				AF0A5C2B1F7631A300E808D6 /* Novesta */,
+				AF0A5C401F7631A300E808D6 /* NovestaTests */,
+				AF0A5C4B1F7631A300E808D6 /* NovestaUITests */,
+				AF0A5C2A1F7631A300E808D6 /* Products */,
+				B400E8B9B2272ECB13FA2CF9 /* Pods */,
+				F92EC0E7333D319A6AD28901 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		AFA3C2581F76130400009C4D /* Products */ = {
+		AF0A5C2A1F7631A300E808D6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AFA3C2571F76130400009C4D /* Novesta.app */,
-				AFA3C26B1F76130400009C4D /* NovestaTests.xctest */,
-				AFA3C2761F76130400009C4D /* NovestaUITests.xctest */,
+				AF0A5C291F7631A300E808D6 /* Novesta.app */,
+				AF0A5C3D1F7631A300E808D6 /* NovestaTests.xctest */,
+				AF0A5C481F7631A300E808D6 /* NovestaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AFA3C2591F76130400009C4D /* Novesta */ = {
+		AF0A5C2B1F7631A300E808D6 /* Novesta */ = {
 			isa = PBXGroup;
 			children = (
-				AFA3C25A1F76130400009C4D /* AppDelegate.swift */,
-				AFA3C25C1F76130400009C4D /* ViewController.swift */,
-				AFA3C25E1F76130400009C4D /* Main.storyboard */,
-				AFA3C2611F76130400009C4D /* Assets.xcassets */,
-				AFA3C2631F76130400009C4D /* LaunchScreen.storyboard */,
-				AFA3C2661F76130400009C4D /* Info.plist */,
+				AF0A5C2C1F7631A300E808D6 /* AppDelegate.swift */,
+				AF0A5C5E1F7633C200E808D6 /* LogIn_ViewController.swift */,
+				AF0A5C301F7631A300E808D6 /* Main.storyboard */,
+				AF0A5C331F7631A300E808D6 /* Assets.xcassets */,
+				AF0A5C351F7631A300E808D6 /* LaunchScreen.storyboard */,
+				AF0A5C381F7631A300E808D6 /* Info.plist */,
+				AF0A5C5C1F7632FD00E808D6 /* GoogleService-Info.plist */,
 			);
 			path = Novesta;
 			sourceTree = "<group>";
 		};
-		AFA3C26E1F76130400009C4D /* NovestaTests */ = {
+		AF0A5C401F7631A300E808D6 /* NovestaTests */ = {
 			isa = PBXGroup;
 			children = (
-				AFA3C26F1F76130400009C4D /* NovestaTests.swift */,
-				AFA3C2711F76130400009C4D /* Info.plist */,
+				AF0A5C411F7631A300E808D6 /* NovestaTests.swift */,
+				AF0A5C431F7631A300E808D6 /* Info.plist */,
 			);
 			path = NovestaTests;
 			sourceTree = "<group>";
 		};
-		AFA3C2791F76130400009C4D /* NovestaUITests */ = {
+		AF0A5C4B1F7631A300E808D6 /* NovestaUITests */ = {
 			isa = PBXGroup;
 			children = (
-				AFA3C27A1F76130400009C4D /* NovestaUITests.swift */,
-				AFA3C27C1F76130400009C4D /* Info.plist */,
+				AF0A5C4C1F7631A300E808D6 /* NovestaUITests.swift */,
+				AF0A5C4E1F7631A300E808D6 /* Info.plist */,
 			);
 			path = NovestaUITests;
+			sourceTree = "<group>";
+		};
+		B400E8B9B2272ECB13FA2CF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F4C283DFC69B7A0D216E8BC /* Pods-Novesta.debug.xcconfig */,
+				71CC6D6CDBF950C6529F0DF2 /* Pods-Novesta.release.xcconfig */,
+				DAA110008354D85870A3A14F /* Pods-NovestaTests.debug.xcconfig */,
+				AB0AD767977EC77989A18745 /* Pods-NovestaTests.release.xcconfig */,
+				0FC44E1E6B330163361C180A /* Pods-NovestaUITests.debug.xcconfig */,
+				1FF7B08897AF07BFB97A194D /* Pods-NovestaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F92EC0E7333D319A6AD28901 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A426FBEFC7EBD162744E8C39 /* Pods_Novesta.framework */,
+				0A05AA507C5639E6BB0A0A22 /* Pods_NovestaTests.framework */,
+				0B911E795D218EEA336A3CAB /* Pods_NovestaUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AFA3C2561F76130400009C4D /* Novesta */ = {
+		AF0A5C281F7631A300E808D6 /* Novesta */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFA3C27F1F76130400009C4D /* Build configuration list for PBXNativeTarget "Novesta" */;
+			buildConfigurationList = AF0A5C511F7631A300E808D6 /* Build configuration list for PBXNativeTarget "Novesta" */;
 			buildPhases = (
-				AFA3C2531F76130400009C4D /* Sources */,
-				AFA3C2541F76130400009C4D /* Frameworks */,
-				AFA3C2551F76130400009C4D /* Resources */,
+				0043E6FAF7BE14975EDA9615 /* [CP] Check Pods Manifest.lock */,
+				AF0A5C251F7631A300E808D6 /* Sources */,
+				AF0A5C261F7631A300E808D6 /* Frameworks */,
+				AF0A5C271F7631A300E808D6 /* Resources */,
+				C79DC93D3318FAFF9957CC12 /* [CP] Embed Pods Frameworks */,
+				C0BC8738FDACEA3D9E687269 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,72 +188,78 @@
 			);
 			name = Novesta;
 			productName = Novesta;
-			productReference = AFA3C2571F76130400009C4D /* Novesta.app */;
+			productReference = AF0A5C291F7631A300E808D6 /* Novesta.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AFA3C26A1F76130400009C4D /* NovestaTests */ = {
+		AF0A5C3C1F7631A300E808D6 /* NovestaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFA3C2821F76130400009C4D /* Build configuration list for PBXNativeTarget "NovestaTests" */;
+			buildConfigurationList = AF0A5C541F7631A300E808D6 /* Build configuration list for PBXNativeTarget "NovestaTests" */;
 			buildPhases = (
-				AFA3C2671F76130400009C4D /* Sources */,
-				AFA3C2681F76130400009C4D /* Frameworks */,
-				AFA3C2691F76130400009C4D /* Resources */,
+				402D8174AFB0192801CF8ED1 /* [CP] Check Pods Manifest.lock */,
+				AF0A5C391F7631A300E808D6 /* Sources */,
+				AF0A5C3A1F7631A300E808D6 /* Frameworks */,
+				AF0A5C3B1F7631A300E808D6 /* Resources */,
+				0A12CAF754BE6CAC79979F93 /* [CP] Embed Pods Frameworks */,
+				3CD06AE341C60A6E2875C906 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AFA3C26D1F76130400009C4D /* PBXTargetDependency */,
+				AF0A5C3F1F7631A300E808D6 /* PBXTargetDependency */,
 			);
 			name = NovestaTests;
 			productName = NovestaTests;
-			productReference = AFA3C26B1F76130400009C4D /* NovestaTests.xctest */;
+			productReference = AF0A5C3D1F7631A300E808D6 /* NovestaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AFA3C2751F76130400009C4D /* NovestaUITests */ = {
+		AF0A5C471F7631A300E808D6 /* NovestaUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFA3C2851F76130400009C4D /* Build configuration list for PBXNativeTarget "NovestaUITests" */;
+			buildConfigurationList = AF0A5C571F7631A300E808D6 /* Build configuration list for PBXNativeTarget "NovestaUITests" */;
 			buildPhases = (
-				AFA3C2721F76130400009C4D /* Sources */,
-				AFA3C2731F76130400009C4D /* Frameworks */,
-				AFA3C2741F76130400009C4D /* Resources */,
+				8FD86B36A5CE680E649E334C /* [CP] Check Pods Manifest.lock */,
+				AF0A5C441F7631A300E808D6 /* Sources */,
+				AF0A5C451F7631A300E808D6 /* Frameworks */,
+				AF0A5C461F7631A300E808D6 /* Resources */,
+				16D815342AC9EB228EB7E4C7 /* [CP] Embed Pods Frameworks */,
+				EDA6939BE6F3DDA89CA24E82 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AFA3C2781F76130400009C4D /* PBXTargetDependency */,
+				AF0A5C4A1F7631A300E808D6 /* PBXTargetDependency */,
 			);
 			name = NovestaUITests;
 			productName = NovestaUITests;
-			productReference = AFA3C2761F76130400009C4D /* NovestaUITests.xctest */;
+			productReference = AF0A5C481F7631A300E808D6 /* NovestaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AFA3C24F1F76130400009C4D /* Project object */ = {
+		AF0A5C211F7631A300E808D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Brian Lin";
 				TargetAttributes = {
-					AFA3C2561F76130400009C4D = {
+					AF0A5C281F7631A300E808D6 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
-					AFA3C26A1F76130400009C4D = {
+					AF0A5C3C1F7631A300E808D6 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
-						TestTargetID = AFA3C2561F76130400009C4D;
+						TestTargetID = AF0A5C281F7631A300E808D6;
 					};
-					AFA3C2751F76130400009C4D = {
+					AF0A5C471F7631A300E808D6 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
-						TestTargetID = AFA3C2561F76130400009C4D;
+						TestTargetID = AF0A5C281F7631A300E808D6;
 					};
 				};
 			};
-			buildConfigurationList = AFA3C2521F76130400009C4D /* Build configuration list for PBXProject "Novesta" */;
+			buildConfigurationList = AF0A5C241F7631A300E808D6 /* Build configuration list for PBXProject "Novesta" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -215,37 +267,38 @@
 				en,
 				Base,
 			);
-			mainGroup = AFA3C24E1F76130400009C4D;
-			productRefGroup = AFA3C2581F76130400009C4D /* Products */;
+			mainGroup = AF0A5C201F7631A300E808D6;
+			productRefGroup = AF0A5C2A1F7631A300E808D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AFA3C2561F76130400009C4D /* Novesta */,
-				AFA3C26A1F76130400009C4D /* NovestaTests */,
-				AFA3C2751F76130400009C4D /* NovestaUITests */,
+				AF0A5C281F7631A300E808D6 /* Novesta */,
+				AF0A5C3C1F7631A300E808D6 /* NovestaTests */,
+				AF0A5C471F7631A300E808D6 /* NovestaUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AFA3C2551F76130400009C4D /* Resources */ = {
+		AF0A5C271F7631A300E808D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFA3C2651F76130400009C4D /* LaunchScreen.storyboard in Resources */,
-				AFA3C2621F76130400009C4D /* Assets.xcassets in Resources */,
-				AFA3C2601F76130400009C4D /* Main.storyboard in Resources */,
+				AF0A5C371F7631A300E808D6 /* LaunchScreen.storyboard in Resources */,
+				AF0A5C5D1F76335A00E808D6 /* GoogleService-Info.plist in Resources */,
+				AF0A5C341F7631A300E808D6 /* Assets.xcassets in Resources */,
+				AF0A5C321F7631A300E808D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFA3C2691F76130400009C4D /* Resources */ = {
+		AF0A5C3B1F7631A300E808D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFA3C2741F76130400009C4D /* Resources */ = {
+		AF0A5C461F7631A300E808D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,60 +307,198 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0043E6FAF7BE14975EDA9615 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0A12CAF754BE6CAC79979F93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NovestaTests/Pods-NovestaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16D815342AC9EB228EB7E4C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NovestaUITests/Pods-NovestaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CD06AE341C60A6E2875C906 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NovestaTests/Pods-NovestaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		402D8174AFB0192801CF8ED1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8FD86B36A5CE680E649E334C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C0BC8738FDACEA3D9E687269 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Novesta/Pods-Novesta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C79DC93D3318FAFF9957CC12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Novesta/Pods-Novesta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDA6939BE6F3DDA89CA24E82 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NovestaUITests/Pods-NovestaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		AFA3C2531F76130400009C4D /* Sources */ = {
+		AF0A5C251F7631A300E808D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFA3C25D1F76130400009C4D /* ViewController.swift in Sources */,
-				AFA3C25B1F76130400009C4D /* AppDelegate.swift in Sources */,
+				AF0A5C5F1F7633C200E808D6 /* LogIn_ViewController.swift in Sources */,
+				AF0A5C2D1F7631A300E808D6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFA3C2671F76130400009C4D /* Sources */ = {
+		AF0A5C391F7631A300E808D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFA3C2701F76130400009C4D /* NovestaTests.swift in Sources */,
+				AF0A5C421F7631A300E808D6 /* NovestaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFA3C2721F76130400009C4D /* Sources */ = {
+		AF0A5C441F7631A300E808D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFA3C27B1F76130400009C4D /* NovestaUITests.swift in Sources */,
+				AF0A5C4D1F7631A300E808D6 /* NovestaUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AFA3C26D1F76130400009C4D /* PBXTargetDependency */ = {
+		AF0A5C3F1F7631A300E808D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AFA3C2561F76130400009C4D /* Novesta */;
-			targetProxy = AFA3C26C1F76130400009C4D /* PBXContainerItemProxy */;
+			target = AF0A5C281F7631A300E808D6 /* Novesta */;
+			targetProxy = AF0A5C3E1F7631A300E808D6 /* PBXContainerItemProxy */;
 		};
-		AFA3C2781F76130400009C4D /* PBXTargetDependency */ = {
+		AF0A5C4A1F7631A300E808D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AFA3C2561F76130400009C4D /* Novesta */;
-			targetProxy = AFA3C2771F76130400009C4D /* PBXContainerItemProxy */;
+			target = AF0A5C281F7631A300E808D6 /* Novesta */;
+			targetProxy = AF0A5C491F7631A300E808D6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AFA3C25E1F76130400009C4D /* Main.storyboard */ = {
+		AF0A5C301F7631A300E808D6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AFA3C25F1F76130400009C4D /* Base */,
+				AF0A5C311F7631A300E808D6 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		AFA3C2631F76130400009C4D /* LaunchScreen.storyboard */ = {
+		AF0A5C351F7631A300E808D6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AFA3C2641F76130400009C4D /* Base */,
+				AF0A5C361F7631A300E808D6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -315,7 +506,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AFA3C27D1F76130400009C4D /* Debug */ = {
+		AF0A5C4F1F7631A300E808D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -372,7 +563,7 @@
 			};
 			name = Debug;
 		};
-		AFA3C27E1F76130400009C4D /* Release */ = {
+		AF0A5C501F7631A300E808D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -422,8 +613,9 @@
 			};
 			name = Release;
 		};
-		AFA3C2801F76130400009C4D /* Debug */ = {
+		AF0A5C521F7631A300E808D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F4C283DFC69B7A0D216E8BC /* Pods-Novesta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -437,8 +629,9 @@
 			};
 			name = Debug;
 		};
-		AFA3C2811F76130400009C4D /* Release */ = {
+		AF0A5C531F7631A300E808D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71CC6D6CDBF950C6529F0DF2 /* Pods-Novesta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,8 +645,9 @@
 			};
 			name = Release;
 		};
-		AFA3C2831F76130400009C4D /* Debug */ = {
+		AF0A5C551F7631A300E808D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAA110008354D85870A3A14F /* Pods-NovestaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,8 +663,9 @@
 			};
 			name = Debug;
 		};
-		AFA3C2841F76130400009C4D /* Release */ = {
+		AF0A5C561F7631A300E808D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB0AD767977EC77989A18745 /* Pods-NovestaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,8 +681,9 @@
 			};
 			name = Release;
 		};
-		AFA3C2861F76130400009C4D /* Debug */ = {
+		AF0A5C581F7631A300E808D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FC44E1E6B330163361C180A /* Pods-NovestaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -502,8 +698,9 @@
 			};
 			name = Debug;
 		};
-		AFA3C2871F76130400009C4D /* Release */ = {
+		AF0A5C591F7631A300E808D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FF7B08897AF07BFB97A194D /* Pods-NovestaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -521,43 +718,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AFA3C2521F76130400009C4D /* Build configuration list for PBXProject "Novesta" */ = {
+		AF0A5C241F7631A300E808D6 /* Build configuration list for PBXProject "Novesta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFA3C27D1F76130400009C4D /* Debug */,
-				AFA3C27E1F76130400009C4D /* Release */,
+				AF0A5C4F1F7631A300E808D6 /* Debug */,
+				AF0A5C501F7631A300E808D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFA3C27F1F76130400009C4D /* Build configuration list for PBXNativeTarget "Novesta" */ = {
+		AF0A5C511F7631A300E808D6 /* Build configuration list for PBXNativeTarget "Novesta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFA3C2801F76130400009C4D /* Debug */,
-				AFA3C2811F76130400009C4D /* Release */,
+				AF0A5C521F7631A300E808D6 /* Debug */,
+				AF0A5C531F7631A300E808D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFA3C2821F76130400009C4D /* Build configuration list for PBXNativeTarget "NovestaTests" */ = {
+		AF0A5C541F7631A300E808D6 /* Build configuration list for PBXNativeTarget "NovestaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFA3C2831F76130400009C4D /* Debug */,
-				AFA3C2841F76130400009C4D /* Release */,
+				AF0A5C551F7631A300E808D6 /* Debug */,
+				AF0A5C561F7631A300E808D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFA3C2851F76130400009C4D /* Build configuration list for PBXNativeTarget "NovestaUITests" */ = {
+		AF0A5C571F7631A300E808D6 /* Build configuration list for PBXNativeTarget "NovestaUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFA3C2861F76130400009C4D /* Debug */,
-				AFA3C2871F76130400009C4D /* Release */,
+				AF0A5C581F7631A300E808D6 /* Debug */,
+				AF0A5C591F7631A300E808D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AFA3C24F1F76130400009C4D /* Project object */;
+	rootObject = AF0A5C211F7631A300E808D6 /* Project object */;
 }
