@@ -19,7 +19,11 @@ class LogIn_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
@@ -27,21 +31,19 @@ class LogIn_ViewController: UIViewController {
             print("user is signed in")
             let UID = Auth.auth().currentUser?.uid
             
+            
             let newPth = Database.database().reference(withPath: "users").child(UID!)
             universalUserID = UID!
             
             print(newPth)
             
+            newPth.child("user_name").setValue("Brian")
             
             self.performSegue(withIdentifier: "toMain", sender: nil)
-            //            self.performSegue(withIdentifier: "toFriends", sender: nil)
-            
             
         } else {
             print("user is NOT signed in")
         }
-
-        // Do any additional setup after loading the view.
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -71,8 +73,6 @@ class LogIn_ViewController: UIViewController {
                 let newPth = Database.database().reference(withPath: "users").child((user?.uid)!)
                 
                 universalUserID = (user?.uid)!
-                
-               
                 
                 self.performSegue(withIdentifier: "toMain", sender: nil)
             }

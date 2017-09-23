@@ -17,6 +17,8 @@
 		AF0A5C4D1F7631A300E808D6 /* NovestaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A5C4C1F7631A300E808D6 /* NovestaUITests.swift */; };
 		AF0A5C5D1F76335A00E808D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF0A5C5C1F7632FD00E808D6 /* GoogleService-Info.plist */; };
 		AF0A5C5F1F7633C200E808D6 /* LogIn_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A5C5E1F7633C200E808D6 /* LogIn_ViewController.swift */; };
+		AF0A5C611F76ADE800E808D6 /* Main_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A5C601F76ADE800E808D6 /* Main_ViewController.swift */; };
+		AF0A5C651F76AFCA00E808D6 /* Novesta_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF0A5C631F76AFCA00E808D6 /* Novesta_TableViewCell.xib */; };
 		EFCD006801C0F3A94402B8AA /* Pods_NovestaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A05AA507C5639E6BB0A0A22 /* Pods_NovestaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,9 @@
 		AF0A5C4E1F7631A300E808D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF0A5C5C1F7632FD00E808D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF0A5C5E1F7633C200E808D6 /* LogIn_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn_ViewController.swift; sourceTree = "<group>"; };
+		AF0A5C601F76ADE800E808D6 /* Main_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_ViewController.swift; sourceTree = "<group>"; };
+		AF0A5C631F76AFCA00E808D6 /* Novesta_TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Novesta_TableViewCell.xib; sourceTree = "<group>"; };
+		AF345BDC1F76C18800589180 /* cryp_bitcoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cryp_bitcoin.png; sourceTree = "<group>"; };
 		DAA110008354D85870A3A14F /* Pods-NovestaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovestaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NovestaTests/Pods-NovestaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,11 +123,14 @@
 			children = (
 				AF0A5C2C1F7631A300E808D6 /* AppDelegate.swift */,
 				AF0A5C5E1F7633C200E808D6 /* LogIn_ViewController.swift */,
+				AF0A5C601F76ADE800E808D6 /* Main_ViewController.swift */,
 				AF0A5C301F7631A300E808D6 /* Main.storyboard */,
+				AF0A5C631F76AFCA00E808D6 /* Novesta_TableViewCell.xib */,
 				AF0A5C331F7631A300E808D6 /* Assets.xcassets */,
 				AF0A5C351F7631A300E808D6 /* LaunchScreen.storyboard */,
 				AF0A5C381F7631A300E808D6 /* Info.plist */,
 				AF0A5C5C1F7632FD00E808D6 /* GoogleService-Info.plist */,
+				AF0A5C661F76BB7600E808D6 /* img_res */,
 			);
 			path = Novesta;
 			sourceTree = "<group>";
@@ -143,6 +151,14 @@
 				AF0A5C4E1F7631A300E808D6 /* Info.plist */,
 			);
 			path = NovestaUITests;
+			sourceTree = "<group>";
+		};
+		AF0A5C661F76BB7600E808D6 /* img_res */ = {
+			isa = PBXGroup;
+			children = (
+				AF345BDC1F76C18800589180 /* cryp_bitcoin.png */,
+			);
+			path = img_res;
 			sourceTree = "<group>";
 		};
 		B400E8B9B2272ECB13FA2CF9 /* Pods */ = {
@@ -285,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF0A5C371F7631A300E808D6 /* LaunchScreen.storyboard in Resources */,
+				AF0A5C651F76AFCA00E808D6 /* Novesta_TableViewCell.xib in Resources */,
 				AF0A5C5D1F76335A00E808D6 /* GoogleService-Info.plist in Resources */,
 				AF0A5C341F7631A300E808D6 /* Assets.xcassets in Resources */,
 				AF0A5C321F7631A300E808D6 /* Main.storyboard in Resources */,
@@ -452,6 +469,7 @@
 			files = (
 				AF0A5C5F1F7633C200E808D6 /* LogIn_ViewController.swift in Sources */,
 				AF0A5C2D1F7631A300E808D6 /* AppDelegate.swift in Sources */,
+				AF0A5C611F76ADE800E808D6 /* Main_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

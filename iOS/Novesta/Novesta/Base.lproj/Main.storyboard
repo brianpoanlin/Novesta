@@ -22,23 +22,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Yyg-B0-8Z1">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Yyg-B0-8Z1">
                                 <rect key="frame" x="63" y="373" width="249" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="249" id="FG5-5Z-j4d"/>
-                                    <constraint firstAttribute="height" constant="30" id="mCx-ip-G2I"/>
+                                    <constraint firstAttribute="height" constant="30" id="q3v-A3-Dk3"/>
                                 </constraints>
                                 <color key="textColor" red="0.28344750400000002" green="0.69443136449999998" blue="0.95240861180000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFw-3Y-87V">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFw-3Y-87V">
                                 <rect key="frame" x="63" y="472" width="249" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Iw5-ra-Xrl"/>
-                                    <constraint firstAttribute="width" constant="249" id="Sfl-bC-4wy"/>
+                                    <constraint firstAttribute="height" constant="50" id="kFE-GM-sfT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="18"/>
                                 <state key="normal" title="SIGN IN">
@@ -49,30 +47,37 @@
                                     <action selector="pressedSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s99-sh-hGE"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BaT-Ma-ztN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BaT-Ma-ztN">
                                 <rect key="frame" x="63" y="411" width="249" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="CDv-BF-2v5"/>
-                                    <constraint firstAttribute="width" constant="249" id="pyI-Ny-14M"/>
+                                    <constraint firstAttribute="height" constant="30" id="ftY-Mg-b8P"/>
                                 </constraints>
                                 <color key="textColor" red="0.28344750400000002" green="0.69443136449999998" blue="0.95240861180000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="PING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVa-g2-duK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novesta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVa-g2-duK">
                                 <rect key="frame" x="0.0" y="266" width="375" height="99"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="99" id="gir-cl-kxa"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="55"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="BaT-Ma-ztN" firstAttribute="top" secondItem="Yyg-B0-8Z1" secondAttribute="bottom" constant="8" id="McN-eX-xcp"/>
-                            <constraint firstItem="eFw-3Y-87V" firstAttribute="top" secondItem="BaT-Ma-ztN" secondAttribute="bottom" constant="31" id="h9Q-bm-f4W"/>
+                            <constraint firstItem="Yyg-B0-8Z1" firstAttribute="trailing" secondItem="BaT-Ma-ztN" secondAttribute="trailing" id="0bw-hB-6ae"/>
+                            <constraint firstItem="xVa-g2-duK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="246" id="4hb-rj-tih"/>
+                            <constraint firstItem="BaT-Ma-ztN" firstAttribute="leading" secondItem="eFw-3Y-87V" secondAttribute="leading" id="9dL-VS-uJZ"/>
+                            <constraint firstItem="eFw-3Y-87V" firstAttribute="top" secondItem="BaT-Ma-ztN" secondAttribute="bottom" constant="31" id="Lcb-qm-4tO"/>
+                            <constraint firstAttribute="trailing" secondItem="xVa-g2-duK" secondAttribute="trailing" id="P6j-dY-kum"/>
+                            <constraint firstItem="xVa-g2-duK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WaS-yL-COD"/>
+                            <constraint firstItem="Yyg-B0-8Z1" firstAttribute="leading" secondItem="BaT-Ma-ztN" secondAttribute="leading" id="ZPj-lU-LYv"/>
+                            <constraint firstItem="BaT-Ma-ztN" firstAttribute="trailing" secondItem="eFw-3Y-87V" secondAttribute="trailing" id="hQ9-ES-UnU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eFw-3Y-87V" secondAttribute="bottom" constant="145" id="hyu-Jb-ARn"/>
+                            <constraint firstItem="BaT-Ma-ztN" firstAttribute="top" secondItem="Yyg-B0-8Z1" secondAttribute="bottom" constant="8" symbolic="YES" id="puI-9D-wG4"/>
+                            <constraint firstItem="Yyg-B0-8Z1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="rsc-Jm-oop"/>
+                            <constraint firstItem="xVa-g2-duK" firstAttribute="centerX" secondItem="Yyg-B0-8Z1" secondAttribute="centerX" id="x4J-eZ-2nA"/>
+                            <constraint firstItem="Yyg-B0-8Z1" firstAttribute="top" secondItem="xVa-g2-duK" secondAttribute="bottom" constant="8" symbolic="YES" id="xeS-bY-voS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -80,10 +85,41 @@
                         <outlet property="passwordTF" destination="BaT-Ma-ztN" id="iYW-XR-mE9"/>
                         <outlet property="signInButton" destination="eFw-3Y-87V" id="hYc-zm-flb"/>
                         <outlet property="userNameTF" destination="Yyg-B0-8Z1" id="VSk-Ee-24a"/>
+                        <segue destination="Tf3-20-8oj" kind="show" identifier="toMain" id="bLU-6p-AUQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="LQF-AL-kVu">
+            <objects>
+                <viewController id="Tf3-20-8oj" customClass="Main_ViewController" customModule="Novesta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lKN-fa-pOR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p32-6O-TOx">
+                                <rect key="frame" x="0.0" y="97" width="375" height="570"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.49610319730000002" green="0.9070411921" blue="0.51760840419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Tf3-20-8oj" id="vhg-nb-quh"/>
+                                    <outlet property="delegate" destination="Tf3-20-8oj" id="yhk-If-B8x"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="oNI-wa-9dT"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="p32-6O-TOx" id="fiB-Rr-CEf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Zz-lZ-Uur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1349.5999999999999" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>
