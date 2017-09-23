@@ -86,7 +86,8 @@
                         <outlet property="signInButton" destination="eFw-3Y-87V" id="hYc-zm-flb"/>
                         <outlet property="userNameTF" destination="Yyg-B0-8Z1" id="VSk-Ee-24a"/>
                         <segue destination="Tf3-20-8oj" kind="show" identifier="toMain" id="bLU-6p-AUQ"/>
-                        <segue destination="tJx-ac-lUT" kind="show" identifier="toMain" id="WgJ-Me-4xC"/>
+                        <segue destination="FPS-K5-3ss" kind="show" identifier="toLeague" id="fLu-J5-N8X"/>
+                        <segue destination="tJx-ac-lUT" kind="show" identifier="toMarket" id="TQm-jS-Osv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -195,7 +196,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1349.5999999999999" y="32.833583208395808"/>
+            <point key="canvasLocation" x="1434" y="29"/>
         </scene>
         <!--Market View Controller-->
         <scene sceneID="8dM-XZ-Ah2">
@@ -274,14 +275,29 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2221.5999999999999" y="30.134932533733135"/>
+            <point key="canvasLocation" x="2409" y="287"/>
+        </scene>
+        <!--League View Controller-->
+        <scene sceneID="ep5-4b-csE">
+            <objects>
+                <viewController id="FPS-K5-3ss" customClass="League_ViewController" customModule="Novesta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="36j-t3-uy7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="t8W-8e-TgX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HqQ-7J-ROu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2868" y="28"/>
         </scene>
     </scenes>
     <resources>
         <image name="novesta_logo_highquality.png" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="47N-l5-DTd"/>
+        <segue reference="TQm-jS-Osv"/>
         <segue reference="bLU-6p-AUQ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -23,6 +23,8 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     let crypRef = Database.database().reference(withPath: "master_crypto")
     var cryp_loc_list: [NSDictionary] = []
+    var cryp_id_list: [NSDictionary] = []
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var portfolioWorth: UILabel!
     
@@ -47,9 +49,9 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     func setUpDataBase() {
-        let creationPath = Database.database().reference(withPath: "users").child(universalUserID).child("portfolio").child((cryp_loc_list[14].value(forKey: "id") as? String)!)
+        let creationPath = Database.database().reference(withPath: "users").child(universalUserID).child("portfolio").child((cryp_loc_list[5].value(forKey: "id") as? String)!)
 
-        creationPath.setValue(cryp_loc_list[14])
+        creationPath.setValue(cryp_loc_list[5])
         
         print("NEW DATA SENT")
         
@@ -60,31 +62,72 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
             .observeSingleEvent(of: .value, with: { snapshot in
                 
                 for child in snapshot.children.allObjects as? [DataSnapshot] ?? []{
-                    let crypDataSimp: [String: AnyObject] =  [
-                        "24h_volume_usd":child.childSnapshot(forPath: "24h_volume_usd").value as! String as AnyObject,
-                        "available_supply":child.childSnapshot(forPath: "available_supply").value as! String as AnyObject,
-                        "id":child.childSnapshot(forPath: "id").value as! String as AnyObject,
-                        "last_updated":child.childSnapshot(forPath: "last_updated").value as! String as AnyObject,
-                        "market_cap_usd":child.childSnapshot(forPath: "market_cap_usd").value as! String as AnyObject,
-                        "name":child.childSnapshot(forPath: "name").value as! String as AnyObject,
-                        "percent_change_1h":child.childSnapshot(forPath: "percent_change_1h").value as! String as AnyObject,
-                        "percent_change_24h":child.childSnapshot(forPath: "percent_change_24h").value as! String as AnyObject,
-                        "percent_change_7d":child.childSnapshot(forPath: "percent_change_7d").value as! String as AnyObject,
-                        "price_btc":child.childSnapshot(forPath: "price_btc").value as! String as AnyObject,
-                        "price_usd":child.childSnapshot(forPath: "price_usd").value as! String as AnyObject,
-                        "rank":child.childSnapshot(forPath: "rank").value as! String as AnyObject,
-                        "symbol":child.childSnapshot(forPath: "symbol").value as! String as AnyObject,
-                        "total_supply":child.childSnapshot(forPath: "total_supply").value as! String as AnyObject]
+                    let crypDataSimp: [String: AnyObject] =  ["id":child.childSnapshot(forPath: "id"), "quantity":child.childSnapshot(forPath: "quantity")]
                     
-                    self.cryp_loc_list.append(crypDataSimp as NSDictionary)
-                    self.tableView.reloadData()
+                    self.cryp_id_list.append(crypDataSimp as NSDictionary)
                     
                     self.updateWorth()
+                    self.fetchCrypFullData()
                 }
                 print("DONE")
             })
         
     }
+    
+    func fetchCrypFullData() {
+        
+        print("FETCHING@@@@@@@@@@@@@@@@@")
+        
+        for ind in self.cryp_id_list {
+            Database.database().reference(withPath: "name_crypto").child((ind.value(forKey: "id") as? String)!).observeSingleEvent(of: .value) { (snapshot:DataSnapshot) in
+                if (snapshot.value != nil) {
+                    let val:[String: AnyObject] =  [
+                        "24h_volume_usd":snapshot.childSnapshot(forPath: "24h_volume_usd").value as! String as AnyObject,
+                        "available_supply":snapshot.childSnapshot(forPath: "available_supply").value as! String as AnyObject,
+                        "id":snapshot.childSnapshot(forPath: "id").value as! String as AnyObject,
+                        "last_updated":snapshot.childSnapshot(forPath: "last_updated").value as! String as AnyObject,
+                        "market_cap_usd":snapshot.childSnapshot(forPath: "market_cap_usd").value as! String as AnyObject,
+                        "name":snapshot.childSnapshot(forPath: "name").value as! String as AnyObject,
+                        "percent_change_1h":snapshot.childSnapshot(forPath: "percent_change_1h").value as! String as AnyObject,
+                        "percent_change_24h":snapshot.childSnapshot(forPath: "percent_change_24h").value as! String as AnyObject,
+                        "percent_change_7d":snapshot.childSnapshot(forPath: "percent_change_7d").value as! String as AnyObject,
+                        "price_btc":snapshot.childSnapshot(forPath: "price_btc").value as! String as AnyObject,
+                        "price_usd":snapshot.childSnapshot(forPath: "price_usd").value as! String as AnyObject,
+                        "rank":snapshot.childSnapshot(forPath: "rank").value as! String as AnyObject,
+                        "symbol":snapshot.childSnapshot(forPath: "symbol").value as! String as AnyObject,
+                        "total_supply":snapshot.childSnapshot(forPath: "total_supply").value as! String as AnyObject]
+                    
+                    self.cryp_loc_list.append(val as NSDictionary)
+                    
+                    self.tableView.reloadData()
+
+                }
+                else {
+                }
+            }
+        }
+    }
+    
+//    func parsing() {
+//        for child in snapshot.children as? [DataSnapshot] ?? []{
+//            let crypDataSimp: [String: AnyObject] =  [
+//                "24h_volume_usd":child.childSnapshot(forPath: "24h_volume_usd").value as! String as AnyObject,
+//                "available_supply":child.childSnapshot(forPath: "available_supply").value as! String as AnyObject,
+//                "id":child.childSnapshot(forPath: "id").value as! String as AnyObject,
+//                "last_updated":child.childSnapshot(forPath: "last_updated").value as! String as AnyObject,
+//                "market_cap_usd":child.childSnapshot(forPath: "market_cap_usd").value as! String as AnyObject,
+//                "name":child.childSnapshot(forPath: "name").value as! String as AnyObject,
+//                "percent_change_1h":child.childSnapshot(forPath: "percent_change_1h").value as! String as AnyObject,
+//                "percent_change_24h":child.childSnapshot(forPath: "percent_change_24h").value as! String as AnyObject,
+//                "percent_change_7d":child.childSnapshot(forPath: "percent_change_7d").value as! String as AnyObject,
+//                "price_btc":child.childSnapshot(forPath: "price_btc").value as! String as AnyObject,
+//                "price_usd":child.childSnapshot(forPath: "price_usd").value as! String as AnyObject,
+//                "rank":child.childSnapshot(forPath: "rank").value as! String as AnyObject,
+//                "symbol":child.childSnapshot(forPath: "symbol").value as! String as AnyObject,
+//                "total_supply":child.childSnapshot(forPath: "total_supply").value as! String as AnyObject]
+//        })
+//
+//    }
     
     var portfolio_netWorth: Double {
         
@@ -103,6 +146,11 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func updateWorth (){
         portfolioWorth.text = String(self.portfolio_netWorth)
+        
+        let creationPath = Database.database().reference(withPath: "users").child(universalUserID).child("net_worth")
+        creationPath.setValue(self.portfolio_netWorth)
+        let creationPath2 = Database.database().reference(withPath: "users").child(universalUserID).child("net_growth")
+        creationPath2.setValue("3.57")
     }
     
     override func didReceiveMemoryWarning() {
@@ -134,15 +182,15 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
             arrow_dir = "uarrow.png"
         }
         else {
-            print("NEGATIVE CHANGE")
-//            arrow_dir = "darrow.png"
+//            print("NEGATIVE CHANGE")
+            arrow_dir = "darrow.png"
         }
         
 //        print((currentEvent.value(forKey: "id") as? String)!)
         
         cell.cryp_name.text = currentEvent.value(forKey: "name") as? String
         cell.cryp_flunc_logo.image = UIImage(named: arrow_dir)
-        cell.cryp_flunc_value.text = currentEvent.value(forKey: "percent_change_24h") as? String
+        cell.cryp_flunc_value.text = "\((currentEvent.value(forKey: "percent_change_24h") as? String)!)%"
         cell.cryp_logo.image = UIImage(named: "\((currentEvent.value(forKey: "id") as? String)!).png")
         cell.backgroundColor = UIColor.clear
         self.tableView.rowHeight = 90.0

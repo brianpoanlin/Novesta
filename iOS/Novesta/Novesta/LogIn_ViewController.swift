@@ -70,9 +70,8 @@ class LogIn_ViewController: UIViewController {
                 
                 universalUserID = (user?.uid)!
                 
-                newPth.child("user_name").setValue("Brian")
+//                newPth.child("user_name").setValue("Abhi")
 
-                
                 self.performSegue(withIdentifier: "toMain", sender: nil)
             }
             else{

@@ -23,12 +23,23 @@ class Market_ViewController: UIViewController, UITableViewDataSource, UITableVie
         // Do any additional setup after loading the view.
     }
     @IBAction func swipeToMain(_ sender: Any) {
+        self.populateData()
+
         self.performSegue(withIdentifier: "market_to_main", sender: nil)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func populateData() {
+        let creationPath = Database.database().reference(withPath: "users").child(universalUserID).child("portfolio")
+        
+        creationPath.setValue([["id":cryp_loc_list[3].value(forKey: "id") as AnyObject,"quantity":"10"],["id":cryp_loc_list[16].value(forKey: "id") as AnyObject,"quantity":"1"],["id":cryp_loc_list[15].value(forKey: "id") as AnyObject,"quantity":"12"],["id":cryp_loc_list[2].value(forKey: "id") as AnyObject,"quantity":"6"],["id":cryp_loc_list[7].value(forKey: "id") as AnyObject,"quantity":"4"]])
+        
+        print("NEW DATA SENT")
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -59,6 +70,7 @@ class Market_ViewController: UIViewController, UITableViewDataSource, UITableVie
                     
                     self.cryp_loc_list.append(crypDataSimp as NSDictionary)
                     self.tableView.reloadData()
+                    
                 }
                 print("DONE")
             })
