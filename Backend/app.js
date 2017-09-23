@@ -5,8 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+var fetch = require('./routes/fetch');
+var autopull = require('./routes/autopull');
+var autoupdate = require('./routes/autoupdate');
+var exchange = require('./routes/exchange');
+
+var intervalID = setInterval(function(){ autoupdate.updateDB(); }, 5000); //timer
+var intervalID2 = setInterval(function(){ autopull.updateDB(); }, 600000); //timer
 
 var app = express();
 
@@ -24,6 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/', index);
 //app.use('/users', users);
+app.use('/fetch', fetch);
+app.use('/e', exchange);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
