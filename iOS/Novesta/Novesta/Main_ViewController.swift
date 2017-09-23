@@ -78,11 +78,11 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "cryp", for: indexPath) as! cryp_tbl_view_cell
         cell.selectionStyle = .none
         let currentEvent = cryp_loc_list[indexPath.row]
-        
+        var imgName = "bitcoin"
         cell.cryp_name.text = currentEvent.value(forKey: "cryp_name") as? String
-        cell.cryp_flunc_logo.image = UIImage(named: "bit_icon.png")
+        cell.cryp_flunc_logo.image = UIImage(named: "\(imgName).png")
         cell.cryp_flunc_value.text = currentEvent.value(forKey: "cryp_value") as? String
-        cell.cryp_logo.image = UIImage(named: "bit_icon.PNG")
+        cell.cryp_logo.image = UIImage(named: "\(imgName).png")
         cell.backgroundColor = UIColor.clear
         self.tableView.rowHeight = 90.0
         
