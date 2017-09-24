@@ -59,13 +59,13 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
                             let value: NSDictionary = snapshot.value! as! NSDictionary
                             print(value.value(forKey: "user_name")!)
                             let userName = value.value(forKey: "user_name")!
-                            let netWorth = value.value(forKey: "net_worth")!
+                            let netWorth = value.value(forKey: "win_ratio")!
                             let netGrowth = value.value(forKey: "net_growth")!
                             let ranking = value.value(forKey: "user_ranking")!
 
                             let leagueMemberData: [String: AnyObject] = ["user_id":indiv as AnyObject,
                                                                         "user_name":userName as AnyObject,
-                                                                        "net_worth":netWorth as AnyObject,
+                                                                        "win_ratio":netWorth as AnyObject,
                                                                         "net_growth":netGrowth as AnyObject,
                                                                         "user_ranking":ranking as AnyObject]
                             self.cryp_loc_listofusers.append(leagueMemberData as NSDictionary)
@@ -136,7 +136,7 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.ranking_label.text = currentEvent.value(forKey: "user_ranking") as? String
         cell.username_label.text = currentEvent.value(forKey: "user_name") as? String
-        cell.networth_label.text = String(describing:currentEvent.value(forKey: "net_worth")!)
+        cell.networth_label.text = String(describing:currentEvent.value(forKey: "win_ratio")!)
         cell.netgrowth_label.text = "123"
         cell.flunc_arrow.image = UIImage(named: "uarrow.png")
         cell.backgroundColor = UIColor.clear

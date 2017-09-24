@@ -229,7 +229,7 @@
                                 <color key="textColor" red="0.28235294119999998" green="0.75686274509999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400.365" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bZ-G9-7qi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bZ-G9-7qi">
                                 <rect key="frame" x="0.0" y="174" width="213" height="76"/>
                                 <color key="backgroundColor" red="0.28235294119999998" green="0.75686274509999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -248,7 +248,7 @@
                                 <color key="textColor" red="0.28235294119999998" green="0.75686274509999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400.365" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcV-Mn-6bB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcV-Mn-6bB">
                                 <rect key="frame" x="212" y="174" width="163" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="163" id="brP-Zd-OSz"/>
@@ -463,8 +463,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="KHa-9o-Ch9"/>
-        <segue reference="czg-gy-YN9"/>
+        <segue reference="47N-l5-DTd"/>
         <segue reference="kRP-VI-bgh"/>
-        <segue reference="GuA-F5-M5f"/>
+        <segue reference="mhb-xm-GaN"/>
     </inferredMetricsTieBreakers>
 </document>
