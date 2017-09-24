@@ -21,9 +21,10 @@ class StockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
-        //setUpChart()
-        //updateChart()
-        print(grab)
+        setUpChart()
+        updateChart()
+        
+        _ = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.updateChart), userInfo: nil, repeats: true)
 
         // Do any additional setup after loading the view.
     }
@@ -33,7 +34,7 @@ class StockViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func updateChart() {
+    @objc func updateChart() {
         var cpuDataR: [ChartDataEntry] = []
         for i in 0..<prices.count {
             cpuDataR.append(ChartDataEntry(x: Double(i), y: prices[i]))
@@ -64,7 +65,7 @@ class StockViewController: UIViewController {
         stockChart.xAxis.drawGridLinesEnabled = false;
         stockChart.xAxis.drawLabelsEnabled = false
         stockChart.xAxis.labelPosition = XAxis.LabelPosition.bottom
-        stockChart.leftAxis.axisMinimum = 0;
+        //stockChart.leftAxis.axisMinimum = 0;
         //CPUChart.leftAxis.axisMaximum = 100;
         stockChart.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     }
@@ -74,6 +75,63 @@ class StockViewController: UIViewController {
         if(grab == "bitcoin") {
             path = "history_crypto/c0"
         }
+        if(grab == "ethereum") {
+            path = "history_crypto/c1"
+        }
+        if(grab == "bitcoin cash") {
+            path = "history_crypto/c2"
+        }
+        if(grab == "ripple") {
+            path = "history_crypto/c3"
+        }
+        if(grab == "dash") {
+            path = "history_crypto/c4"
+        }
+        if(grab == "litecoin") {
+            path = "history_crypto/c5"
+        }
+        if(grab == "nem") {
+            path = "history_crypto/c6"
+        }
+        if(grab == "iota") {
+            path = "history_crypto/c7"
+        }
+        if(grab == "steem") {
+            path = "history_crypto/c8"
+        }
+        if(grab == "ethereum classic") {
+            path = "history_crypto/c9"
+        }
+        if(grab == "neo") {
+            path = "history_crypto/c10"
+        }
+        if(grab == "omisego") {
+            path = "history_crypto/c11"
+        }
+        if(grab == "bitconnect") {
+            path = "history_crypto/c12"
+        }
+        if(grab == "lisk") {
+            path = "history_crypto/c13"
+        }
+        if(grab == "qtum") {
+            path = "history_crypto/c14"
+        }
+        if(grab == "zcash") {
+            path = "history_crypto/c15"
+        }
+        if(grab == "tether") {
+            path = "history_crypto/c16"
+        }
+        if(grab == "stratis") {
+            path = "history_crypto/c17"
+        }
+        if(grab == "waves") {
+            path = "history_crypto/c18"
+        }
+        if(grab == "ark") {
+            path = "history_crypto/c19"
+        }
     
         
         print(path)
@@ -82,11 +140,11 @@ class StockViewController: UIViewController {
             .observeSingleEvent(of: .value, with: { snapshot in
                 var i = 0
                 for child in snapshot.children.allObjects as? [DataSnapshot] ?? []{
-                    
                     let value = child.value as! String
-                    
-                    print(value)
-                    
+                    print(snapshot.childrenCount);
+                    if(i < snapshot.childrenCount - 1) {
+                        self.prices.append(Double(value)!);
+                    }
                     i += 1;
                    }
         })
