@@ -223,11 +223,22 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.cryp_flunc_value.text = "\((currentEvent.value(forKey: "percent_change_24h") as? String)!)%"
         cell.cryp_logo.image = UIImage(named: "\((currentEvent.value(forKey: "id") as? String)!).png")
         cell.backgroundColor = UIColor.clear
+        
         self.tableView.rowHeight = 90.0
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        let curr = tableView.cellForRow(at: indexPath) as? cryp_tbl_view_cell;
+        print(curr?.cryp_name.text?.lowercased() as! String)
+        
+        
+    }
+    
+
+
     /*
     // MARK: - Navigation
 
