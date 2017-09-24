@@ -27,6 +27,7 @@ class StockViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceText: UILabel!
     @IBOutlet weak var hrChangeLabel: UILabel!
+    @IBOutlet weak var printAmount: UILabel!
     
     @IBOutlet weak var dimmer: UIView!
     @IBOutlet weak var amountIn: UITextField!
@@ -224,6 +225,7 @@ class StockViewController: UIViewController {
                     }
                     i+=1
                 }
+                self.printAmount.text = "Current " + self.grab + ": " + self.currency
         })
         
         Database.database().reference(withPath: "users").child(universalUserID)

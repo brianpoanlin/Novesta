@@ -16,6 +16,7 @@ class cryp_tbl_view_cell: UITableViewCell {
     @IBOutlet weak var cryp_logo: UIImageView!
     @IBOutlet weak var cryp_flunc_logo: UIImageView!
     @IBOutlet weak var cryp_flunc_value: UILabel!
+    @IBOutlet weak var quant: UILabel!
     
 }
 
@@ -242,6 +243,8 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.cryp_flunc_logo.image = UIImage(named: arrow_dir)
         cell.cryp_flunc_value.text = "\((currentEvent.value(forKey: "percent_change_24h") as? String)!)%"
         cell.cryp_logo.image = UIImage(named: "\((currentEvent.value(forKey: "id") as? String)!).png")
+        cell.quant.text = currentEvent.value(forKey: "user_quantity") as? String
+
         cell.backgroundColor = UIColor.clear
         self.tableView.rowHeight = 90.0
         

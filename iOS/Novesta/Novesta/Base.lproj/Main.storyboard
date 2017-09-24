@@ -211,6 +211,13 @@
                                     <action selector="buyPressed:" destination="ZlQ-JE-aCJ" eventType="touchUpInside" id="3lb-qv-FXO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqZ-If-bm3">
+                                <rect key="frame" x="0.0" y="499" width="375" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x5e-NF-b6h">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -261,6 +268,7 @@
                         <outlet property="hrChangeLabel" destination="Vqs-S8-9YE" id="acf-JD-1kc"/>
                         <outlet property="nameLabel" destination="Qea-nr-jDr" id="kJG-I2-jt9"/>
                         <outlet property="priceText" destination="eiH-PS-qjj" id="t9v-by-QXB"/>
+                        <outlet property="printAmount" destination="aqZ-If-bm3" id="sQB-VJ-Fu8"/>
                         <outlet property="stockChart" destination="rQh-4O-cOm" id="FaZ-J1-PWG"/>
                         <outlet property="subButton" destination="LiY-b7-Jpa" id="EXQ-Fb-WVc"/>
                     </connections>
