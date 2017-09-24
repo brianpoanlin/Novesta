@@ -26,15 +26,14 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "Novesta_TableViewCell", bundle: nil), forCellReuseIdentifier: "cryp")
-        
+        tableView.register(UINib(nibName: "leagueCellTVC", bundle: nil), forCellReuseIdentifier: "league")
+
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.pullData()
         print("screen loaded")
-
+        self.pullData()
 
     }
     
@@ -46,21 +45,39 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
                     
                     print(child.childSnapshot(forPath: "members"))
                     let array = child.childSnapshot(forPath: "members").value as! [AnyObject]
-                    print(array)
+//                    print(array)
                     
                     for indiv in array {
-                        print(Database.database().reference(withPath: "users").child(indiv as! String))
+//                        print(Database.database().reference(withPath: "users").child(indiv as! String))
                         Database.database().reference(withPath: "users").child(indiv as! String).observeSingleEvent(of: .value) { (snapshot:DataSnapshot) in
-                        if (snapshot.value! != nil) {
-                            let name = child.childSnapshot(forPath: "user_name").value as! String
-                            print(name)
+                            
+                        if (snapshot.value != nil) {
+                            let value: NSDictionary = snapshot.value! as! NSDictionary
+                            print(value.value(forKey: "user_name")!)
+                            let userName = value.value(forKey: "user_name")!
+                            let netWorth = value.value(forKey: "net_worth")!
+                            let netGrowth = value.value(forKey: "net_growth")!
+                            
+                            
+                            
+                            let leagueMemberData: [String: AnyObject] = ["user_id":indiv as AnyObject,
+                                                                        "user_name":userName as AnyObject,
+                                                                        "net_worth":netWorth as AnyObject,
+                                                                        "net_growth":netGrowth as AnyObject,
+                                                                        "user_ranking":"1" as AnyObject]
+                            self.cryp_loc_listofusers.append(leagueMemberData as NSDictionary)
+                            print(netGrowth)
+                            print(netWorth)
+                            print("added to array")
+                            self.tableView.reloadData()
+
                         }
                         else {
+                            print("ERROR")
                         }
                         }
                     }
                     
-                    self.tableView.reloadData()
                     
                     print("DONE")
 
@@ -94,32 +111,33 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cryp", for: indexPath) as! cryp_tbl_view_cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "league", for: indexPath) as! league_custom_cell
         cell.selectionStyle = .none
         let currentEvent = cryp_loc_listofusers[indexPath.row]
         
-        let value_pars = currentEvent.value(forKey: "percent_change_24h") as? String
-        let value_float = Double(value_pars!)
+//        let value_pars = currentEvent.value(forKey: "percent_change_24h") as? String
+//        let value_float = Double(value_pars!)
         
-        var arrow_dir = ""
+//        var arrow_dir = ""
+//
+//        if (Double(value_float!) > 0) {
+//            print("POSITIVE CHANGE")
+//            arrow_dir = "uarrow.png"
+//        }
+//        else {
+//            print("NEGATIVE CHANGE")
+//            arrow_dir = "darrow.png"
+//        }
         
-        if (Double(value_float!) > 0) {
-            print("POSITIVE CHANGE")
-            arrow_dir = "uarrow.png"
-        }
-        else {
-            print("NEGATIVE CHANGE")
-            arrow_dir = "darrow.png"
-        }
+//        print((currentEvent.value(forKey: "id") as? String)!)
         
-        print((currentEvent.value(forKey: "id") as? String)!)
-        
-        cell.cryp_name.text = currentEvent.value(forKey: "name") as? String
-        cell.cryp_flunc_logo.image = UIImage(named: arrow_dir)
-        cell.cryp_flunc_value.text = currentEvent.value(forKey: "percent_change_24h") as? String
-        cell.cryp_logo.image = UIImage(named: "\((currentEvent.value(forKey: "id") as? String)!).png")
+        cell.ranking_label.text = currentEvent.value(forKey: "user_ranking") as? String
+        cell.username_label.text = currentEvent.value(forKey: "user_name") as? String
+        cell.networth_label.text = String(describing:currentEvent.value(forKey: "net_worth")!)
+        cell.netgrowth_label.text = "123"
+        cell.flunc_arrow.image = UIImage(named: "uarrow.png")
         cell.backgroundColor = UIColor.clear
-        self.tableView.rowHeight = 90.0
+        self.tableView.rowHeight = 80.0
         
         return cell
     }
