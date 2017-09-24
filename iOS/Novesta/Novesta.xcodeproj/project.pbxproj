@@ -53,6 +53,7 @@
 		AF345C341F77462F00589180 /* novesta_faceoff_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C321F77462B00589180 /* novesta_faceoff_logo.png */; };
 		AF345C351F77462F00589180 /* novesta_investors_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C331F77462C00589180 /* novesta_investors_logo.png */; };
 		AF345C391F77556300589180 /* leagueCellTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF345C371F77556300589180 /* leagueCellTVC.xib */; };
+		AF345C3C1F7781E200589180 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF345C3B1F7781E200589180 /* StockViewController.swift */; };
 		EFCD006801C0F3A94402B8AA /* Pods_NovestaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A05AA507C5639E6BB0A0A22 /* Pods_NovestaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,7 @@
 		AF345C321F77462B00589180 /* novesta_faceoff_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_faceoff_logo.png; path = ../../../../Res/Logo/novesta_faceoff_logo.png; sourceTree = "<group>"; };
 		AF345C331F77462C00589180 /* novesta_investors_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_investors_logo.png; path = ../../../../Res/Logo/novesta_investors_logo.png; sourceTree = "<group>"; };
 		AF345C371F77556300589180 /* leagueCellTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = leagueCellTVC.xib; sourceTree = "<group>"; };
+		AF345C3B1F7781E200589180 /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
 		DAA110008354D85870A3A14F /* Pods-NovestaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovestaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NovestaTests/Pods-NovestaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +195,7 @@
 				AF0A5C601F76ADE800E808D6 /* Main_ViewController.swift */,
 				AF345BE51F76CF0300589180 /* Market_ViewController.swift */,
 				AF345C2A1F76FBF400589180 /* League_ViewController.swift */,
+				AF345C3B1F7781E200589180 /* StockViewController.swift */,
 				AF0A5C301F7631A300E808D6 /* Main.storyboard */,
 				AF345C281F76E99700589180 /* Animated_Right.swift */,
 				AF345C261F76E76700589180 /* Animated.swift */,
@@ -604,6 +607,7 @@
 				AF0A5C5F1F7633C200E808D6 /* LogIn_ViewController.swift in Sources */,
 				AF0A5C2D1F7631A300E808D6 /* AppDelegate.swift in Sources */,
 				AF0A5C611F76ADE800E808D6 /* Main_ViewController.swift in Sources */,
+				AF345C3C1F7781E200589180 /* StockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

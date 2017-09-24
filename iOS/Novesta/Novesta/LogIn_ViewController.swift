@@ -41,7 +41,7 @@ class LogIn_ViewController: UIViewController {
             
             print(newPth)
             
-            self.performSegue(withIdentifier: "toLeague", sender: nil)
+            self.performSegue(withIdentifier: "toMain", sender: nil)
             
         } else {
             print("user is NOT signed in")

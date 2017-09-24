@@ -103,6 +103,68 @@
             </objects>
             <point key="canvasLocation" x="688.79999999999995" y="29.23538230884558"/>
         </scene>
+        <!--Stock View Controller-->
+        <scene sceneID="tN3-Hy-k0D">
+            <objects>
+                <viewController id="ZlQ-JE-aCJ" customClass="StockViewController" customModule="Novesta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DiV-Mn-zoh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rQh-4O-cOm" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="263" width="375" height="237"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nf9-eo-hGw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="novesta_portfolio_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="zU6-73-a89">
+                                        <rect key="frame" x="0.0" y="-14" width="375" height="156"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.75686274509999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="6Yr-0C-c60"/>
+                                    <constraint firstAttribute="bottom" secondItem="zU6-73-a89" secondAttribute="bottom" constant="-32" id="9ZI-CK-lnS"/>
+                                    <constraint firstItem="zU6-73-a89" firstAttribute="top" secondItem="Nf9-eo-hGw" secondAttribute="top" constant="-14" id="Bud-3R-7V4"/>
+                                    <constraint firstAttribute="trailing" secondItem="zU6-73-a89" secondAttribute="trailing" id="kzM-iV-x09"/>
+                                    <constraint firstItem="zU6-73-a89" firstAttribute="leading" secondItem="Nf9-eo-hGw" secondAttribute="leading" id="n7g-Lc-6g1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4e-l5-56M">
+                                <rect key="frame" x="29" y="126" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Tf3-20-8oj" kind="show" id="kRP-VI-bgh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Current Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-nr-jDr">
+                                <rect key="frame" x="16" y="191" width="349" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.75686274509999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nf9-eo-hGw" firstAttribute="leading" secondItem="6EQ-Cn-34t" secondAttribute="leading" id="3Ux-c4-uDW"/>
+                            <constraint firstItem="Nf9-eo-hGw" firstAttribute="top" secondItem="DiV-Mn-zoh" secondAttribute="top" id="Gbl-FV-zJr"/>
+                            <constraint firstItem="Nf9-eo-hGw" firstAttribute="trailing" secondItem="6EQ-Cn-34t" secondAttribute="trailing" id="SYw-MF-mqe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6EQ-Cn-34t"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="Qea-nr-jDr" id="kJG-I2-jt9"/>
+                        <outlet property="stockChart" destination="rQh-4O-cOm" id="FaZ-J1-PWG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5P-O2-kaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1284" y="-685.00749625187416"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="LQF-AL-kVu">
             <objects>
@@ -210,6 +272,7 @@
                         <outlet property="portfolioWorth" destination="6bZ-G9-7qi" id="tbO-Uj-aLP"/>
                         <outlet property="tableView" destination="p32-6O-TOx" id="fiB-Rr-CEf"/>
                         <segue destination="tJx-ac-lUT" kind="show" identifier="main_to_market" customClass="Animated_Right" customModule="Novesta" customModuleProvider="target" id="47N-l5-DTd"/>
+                        <segue destination="ZlQ-JE-aCJ" kind="show" identifier="toInfoView" id="mhb-xm-GaN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Zz-lZ-Uur" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,7 +282,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1432.8" y="28.335832083958024"/>
+            <point key="canvasLocation" x="1401" y="49"/>
         </scene>
         <!--Market View Controller-->
         <scene sceneID="8dM-XZ-Ah2">
@@ -278,6 +341,7 @@
                     <connections>
                         <outlet property="tableView" destination="J1h-G2-Kdx" id="mC9-Wl-oVZ"/>
                         <segue destination="Tf3-20-8oj" kind="show" identifier="market_to_main" customClass="Animated" customModule="Novesta" customModuleProvider="target" id="Yoq-bs-PZP"/>
+                        <segue destination="ZlQ-JE-aCJ" kind="show" identifier="toInfo" id="GuA-F5-M5f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Jy-Zb-Ocf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -287,7 +351,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2120.8000000000002" y="27.436281859070466"/>
+            <point key="canvasLocation" x="2100" y="57"/>
         </scene>
         <!--League View Controller-->
         <scene sceneID="ep5-4b-csE">
@@ -362,6 +426,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="47N-l5-DTd"/>
-        <segue reference="Yoq-bs-PZP"/>
+        <segue reference="kRP-VI-bgh"/>
+        <segue reference="GuA-F5-M5f"/>
     </inferredMetricsTieBreakers>
 </document>
