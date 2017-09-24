@@ -211,13 +211,6 @@
                                     <action selector="buyPressed:" destination="ZlQ-JE-aCJ" eventType="touchUpInside" id="3lb-qv-FXO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqZ-If-bm3">
-                                <rect key="frame" x="0.0" y="499" width="375" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x5e-NF-b6h">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -260,7 +253,6 @@
                         <viewLayoutGuide key="safeArea" id="6EQ-Cn-34t"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Dgr-7q-9u9" appends="YES" id="Swc-nG-Jow"/>
-                            <outletCollection property="gestureRecognizers" destination="Pud-kv-H3g" appends="YES" id="voF-ew-z0Q"/>
                         </connections>
                     </view>
                     <connections>
@@ -269,7 +261,6 @@
                         <outlet property="hrChangeLabel" destination="Vqs-S8-9YE" id="acf-JD-1kc"/>
                         <outlet property="nameLabel" destination="Qea-nr-jDr" id="kJG-I2-jt9"/>
                         <outlet property="priceText" destination="eiH-PS-qjj" id="t9v-by-QXB"/>
-                        <outlet property="printAmount" destination="aqZ-If-bm3" id="sQB-VJ-Fu8"/>
                         <outlet property="stockChart" destination="rQh-4O-cOm" id="FaZ-J1-PWG"/>
                         <outlet property="subButton" destination="LiY-b7-Jpa" id="EXQ-Fb-WVc"/>
                     </connections>
@@ -280,11 +271,6 @@
                         <action selector="swipedDown:" destination="ZlQ-JE-aCJ" id="wtx-v5-0q0"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <tapGestureRecognizer id="Pud-kv-H3g">
-                    <connections>
-                        <action selector="tapped:" destination="ZlQ-JE-aCJ" id="htX-03-lJO"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1284" y="-685.00749625187416"/>
         </scene>
@@ -297,7 +283,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p32-6O-TOx">
-                                <rect key="frame" x="0.0" y="298" width="375" height="295"/>
+                                <rect key="frame" x="0.0" y="299" width="375" height="368"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.49610319730000002" green="0.9070411921" blue="0.51760840419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
@@ -361,24 +347,18 @@
                                 <color key="textColor" red="0.28235294119999998" green="0.75686274509999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="novesta_dock_portfolio2.png" translatesAutoresizingMaskIntoConstraints="NO" id="N9v-ku-GcD">
-                                <rect key="frame" x="0.0" y="456" width="375" height="211"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="2Ns-jH-q9u" firstAttribute="top" secondItem="lKN-fa-pOR" secondAttribute="top" id="5SH-mC-bDJ"/>
-                            <constraint firstItem="p32-6O-TOx" firstAttribute="bottom" secondItem="oNI-wa-9dT" secondAttribute="bottom" constant="-74" id="7en-tV-f3I"/>
+                            <constraint firstItem="p32-6O-TOx" firstAttribute="bottom" secondItem="oNI-wa-9dT" secondAttribute="bottom" id="7en-tV-f3I"/>
                             <constraint firstItem="BEG-2b-oJ1" firstAttribute="leading" secondItem="oNI-wa-9dT" secondAttribute="leading" constant="10" id="BEH-7O-5QX"/>
-                            <constraint firstItem="p32-6O-TOx" firstAttribute="centerX" secondItem="lKN-fa-pOR" secondAttribute="centerX" id="HfX-f4-fs5"/>
                             <constraint firstItem="6bZ-G9-7qi" firstAttribute="top" secondItem="BEG-2b-oJ1" secondAttribute="bottom" constant="8" id="J5W-DV-IR6"/>
                             <constraint firstItem="hcV-Mn-6bB" firstAttribute="trailing" secondItem="oNI-wa-9dT" secondAttribute="trailing" id="OAz-Qd-wfU"/>
                             <constraint firstItem="BEG-2b-oJ1" firstAttribute="top" secondItem="2Ns-jH-q9u" secondAttribute="bottom" constant="35" id="QNw-w9-EyL"/>
                             <constraint firstItem="p32-6O-TOx" firstAttribute="trailing" secondItem="oNI-wa-9dT" secondAttribute="trailing" id="Si5-ht-c0y"/>
-                            <constraint firstItem="p32-6O-TOx" firstAttribute="top" secondItem="Gnk-py-CIY" secondAttribute="bottom" constant="7" id="TIO-9D-oNb"/>
-                            <constraint firstItem="p32-6O-TOx" firstAttribute="centerY" secondItem="lKN-fa-pOR" secondAttribute="centerY" constant="112" id="Yre-u8-9az"/>
+                            <constraint firstItem="p32-6O-TOx" firstAttribute="top" secondItem="Gnk-py-CIY" secondAttribute="bottom" constant="8" id="TIO-9D-oNb"/>
                             <constraint firstItem="Gnk-py-CIY" firstAttribute="top" secondItem="6bZ-G9-7qi" secondAttribute="bottom" constant="20" id="bee-il-3OG"/>
                             <constraint firstItem="oNI-wa-9dT" firstAttribute="trailing" secondItem="BEG-2b-oJ1" secondAttribute="trailing" constant="16" id="d88-hU-BrY"/>
                             <constraint firstItem="oNI-wa-9dT" firstAttribute="trailing" secondItem="Gnk-py-CIY" secondAttribute="trailing" constant="10" id="exY-JP-Lzs"/>
@@ -421,9 +401,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J1h-G2-Kdx">
-                                <rect key="frame" x="0.0" y="109" width="375" height="476"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J1h-G2-Kdx">
+                                <rect key="frame" x="0.0" y="109" width="375" height="558"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.49610319730000002" green="0.9070411921" blue="0.51760840419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
@@ -449,17 +428,19 @@
                                     <constraint firstAttribute="height" constant="110" id="w8G-sF-43t"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="novesta_dock_market2.png" translatesAutoresizingMaskIntoConstraints="NO" id="vb4-Ec-GB6">
-                                <rect key="frame" x="0.0" y="456" width="375" height="211"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="J1h-G2-Kdx" firstAttribute="bottom" secondItem="nnZ-SC-CSN" secondAttribute="bottom" id="6B7-wZ-dPh"/>
                             <constraint firstItem="8NU-ga-btP" firstAttribute="top" secondItem="dhG-HL-ITk" secondAttribute="top" id="CiN-qR-Neu"/>
                             <constraint firstAttribute="trailing" secondItem="8NU-ga-btP" secondAttribute="trailing" id="OcC-Oi-9PU"/>
                             <constraint firstItem="8NU-ga-btP" firstAttribute="leading" secondItem="dhG-HL-ITk" secondAttribute="leading" id="Y2A-H4-CAI"/>
+                            <constraint firstItem="J1h-G2-Kdx" firstAttribute="top" secondItem="nnZ-SC-CSN" secondAttribute="top" constant="89" id="YpG-4L-9To"/>
+                            <constraint firstItem="J1h-G2-Kdx" firstAttribute="leading" secondItem="nnZ-SC-CSN" secondAttribute="leading" id="cmP-hP-oCw"/>
+                            <constraint firstItem="J1h-G2-Kdx" firstAttribute="trailing" secondItem="nnZ-SC-CSN" secondAttribute="trailing" id="eqC-83-sBR"/>
+                            <constraint firstItem="8NU-ga-btP" firstAttribute="trailing" secondItem="J1h-G2-Kdx" secondAttribute="trailing" id="icn-IV-bMP"/>
+                            <constraint firstItem="8NU-ga-btP" firstAttribute="leading" secondItem="J1h-G2-Kdx" secondAttribute="leading" id="niY-hV-OUw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nnZ-SC-CSN"/>
                         <connections>
@@ -522,7 +503,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kOr-bR-YWG">
-                                <rect key="frame" x="0.0" y="154" width="375" height="434"/>
+                                <rect key="frame" x="0.0" y="154" width="375" height="513"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.49610319730000002" green="0.9070411921" blue="0.51760840419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -531,10 +512,6 @@
                                     <outlet property="delegate" destination="FPS-K5-3ss" id="kwn-BE-YZW"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="novesta_dock_investors2.png" translatesAutoresizingMaskIntoConstraints="NO" id="eSC-lp-k9n">
-                                <rect key="frame" x="0.0" y="456" width="375" height="211"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -568,18 +545,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="novesta_dock_investors2.png" width="1280" height="719"/>
-        <image name="novesta_dock_market2.png" width="1280" height="719"/>
-        <image name="novesta_dock_portfolio2.png" width="1280" height="719"/>
         <image name="novesta_investors_header.png" width="2668" height="1500"/>
         <image name="novesta_logo_highquality.png" width="1024" height="1024"/>
         <image name="novesta_market_header.png" width="2668" height="1500"/>
         <image name="novesta_portfolio_header.png" width="2668" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KHa-9o-Ch9"/>
-        <segue reference="czg-gy-YN9"/>
-        <segue reference="NMO-EI-zZU"/>
+        <segue reference="fLu-J5-N8X"/>
+        <segue reference="TQm-jS-Osv"/>
+        <segue reference="kRP-VI-bgh"/>
         <segue reference="GuA-F5-M5f"/>
     </inferredMetricsTieBreakers>
 </document>
