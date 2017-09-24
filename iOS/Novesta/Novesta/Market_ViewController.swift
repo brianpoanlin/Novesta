@@ -114,8 +114,9 @@ class Market_ViewController: UIViewController, UITableViewDataSource, UITableVie
         
         cell.cryp_name.text = currentEvent.value(forKey: "name") as? String
         cell.cryp_flunc_logo.image = UIImage(named: arrow_dir)
-        cell.cryp_flunc_value.text = currentEvent.value(forKey: "percent_change_24h") as? String
+        cell.cryp_flunc_value.text = "\((currentEvent.value(forKey: "percent_change_24h") as? String)!)%"
         cell.cryp_logo.image = UIImage(named: "\((currentEvent.value(forKey: "id") as? String)!).png")
+        cell.quant.text = ""
         cell.backgroundColor = UIColor.clear
         self.tableView.rowHeight = 90.0
         

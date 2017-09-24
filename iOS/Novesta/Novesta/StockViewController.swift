@@ -33,6 +33,9 @@ class StockViewController: UIViewController {
     @IBOutlet weak var amountIn: UITextField!
     @IBOutlet weak var subButton: UIButton!
     
+    @IBAction func tapped(_ sender: Any) {
+        amountIn.resignFirstResponder()
+    }
     
     @IBAction func swipedDown(_ sender: Any) {
         self.performSegue(withIdentifier: "back", sender: nil);
@@ -256,6 +259,7 @@ class StockViewController: UIViewController {
     
     
     @IBAction func submitPressed(_ sender: Any) {
+        amountIn.resignFirstResponder()
         dimmer.alpha = 0;
         subButton.alpha = 0;
         
