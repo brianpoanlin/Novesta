@@ -10,12 +10,20 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Novesta/League_ViewController.swift"
+<<<<<<< HEAD
             timestampString = "527926483.493905"
+=======
+            timestampString = "527924992.633003"
+>>>>>>> origin/master
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
             endingLineNumber = "82"
+<<<<<<< HEAD
             landmarkName = "didReceiveMemoryWarning()"
+=======
+            landmarkName = "pullData()"
+>>>>>>> origin/master
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,7 +34,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Novesta/League_ViewController.swift"
+<<<<<<< HEAD
             timestampString = "527926483.493993"
+=======
+            timestampString = "527924992.633097"
+>>>>>>> origin/master
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -42,13 +54,22 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Novesta/League_ViewController.swift"
+<<<<<<< HEAD
             timestampString = "527926483.494062"
+=======
+            timestampString = "527924992.633161"
+>>>>>>> origin/master
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
             endingLineNumber = "71"
+<<<<<<< HEAD
             landmarkName = "preferredStatusBarStyle"
             landmarkType = "24">
+=======
+            landmarkName = "pullData()"
+            landmarkType = "7">
+>>>>>>> origin/master
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,13 +79,22 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Novesta/League_ViewController.swift"
+<<<<<<< HEAD
             timestampString = "527926483.494123"
+=======
+            timestampString = "527924992.63322"
+>>>>>>> origin/master
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "137"
             endingLineNumber = "137"
+<<<<<<< HEAD
             landmarkName = "League_ViewController"
             landmarkType = "3">
+=======
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+>>>>>>> origin/master
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
