@@ -15,11 +15,13 @@ class StockViewController: UIViewController {
     var grab : String!;
     var prices = [Double]()
     @IBOutlet weak var stockChart: LineChartView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     let crypRef = Database.database().reference(withPath: "history_crypto")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = grab.uppercased() + " (USD)";
         getData()
         setUpChart()
         updateChart()
@@ -58,12 +60,12 @@ class StockViewController: UIViewController {
         stockChart.drawBordersEnabled = false;
         stockChart.drawMarkers = false
         stockChart.leftAxis.drawGridLinesEnabled = false
-        stockChart.leftAxis.labelTextColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        stockChart.leftAxis.labelTextColor = #colorLiteral(red: 0.1450774968, green: 0.1451098621, blue: 0.1450754404, alpha: 1)
         stockChart.rightAxis.drawLabelsEnabled = false
         stockChart.rightAxis.drawGridLinesEnabled = false
         stockChart.rightAxis.drawAxisLineEnabled = false
         stockChart.xAxis.drawGridLinesEnabled = false;
-        stockChart.xAxis.drawLabelsEnabled = false
+        stockChart.xAxis.drawLabelsEnabled = true
         stockChart.xAxis.labelPosition = XAxis.LabelPosition.bottom
         //stockChart.leftAxis.axisMinimum = 0;
         //CPUChart.leftAxis.axisMaximum = 100;
