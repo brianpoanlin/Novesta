@@ -42,7 +42,6 @@ function push(data) {
     test.once("value", function(snapshot) {
         s = Object.keys(snapshot.val()).length;
         for(var i = 0; i < 20; i++) {
-            console.log(s);
             history.child('c'+i).child(s+'').set(data[i].price_usd);
         }
     }, function (errorObject) {
