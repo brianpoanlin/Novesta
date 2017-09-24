@@ -5,36 +5,32 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="league" rowHeight="79" id="KGk-i7-Jjw" customClass="leagueCellTVC" customModule="Novesta" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="league" rowHeight="79" id="KGk-i7-Jjw" customClass="league_custom_cell" customModule="Novesta" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="446" height="79"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="446" height="78.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umo-dn-rt7">
-                        <rect key="frame" x="18" y="29" width="27" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umo-dn-rt7">
+                        <rect key="frame" x="18" y="29" width="19" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="19" id="AF4-Oo-YW0"/>
+                            <constraint firstAttribute="height" constant="21" id="bcm-YC-W57"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIP-te-Wqc">
-                        <rect key="frame" x="53" y="29" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfZ-Td-kGI">
-                        <rect key="frame" x="210" y="29" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIP-te-Wqc">
+                        <rect key="frame" x="45" y="29" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -46,11 +42,27 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iEi-Vd-3IS">
-                        <rect key="frame" x="275" y="23" width="36" height="33"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="darrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="iEi-Vd-3IS">
+                        <rect key="frame" x="151" y="23" width="264" height="33"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfZ-Td-kGI">
+                        <rect key="frame" x="101" y="29" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="hfZ-Td-kGI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="21" id="FK5-6f-K1j"/>
+                    <constraint firstItem="hfZ-Td-kGI" firstAttribute="leading" secondItem="tIP-te-Wqc" secondAttribute="trailing" constant="14" id="Uip-uX-RGC"/>
+                    <constraint firstItem="tIP-te-Wqc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="21" id="aE8-tq-AJn"/>
+                    <constraint firstItem="Umo-dn-rt7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="dX7-ym-eHN"/>
+                    <constraint firstItem="tIP-te-Wqc" firstAttribute="leading" secondItem="Umo-dn-rt7" secondAttribute="trailing" constant="8" id="edX-p2-AeT"/>
+                    <constraint firstItem="Umo-dn-rt7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gHY-xv-g9K"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="tIP-te-Wqc" secondAttribute="bottom" constant="20.5" id="qUA-XE-yGa"/>
+                    <constraint firstItem="iEi-Vd-3IS" firstAttribute="leading" secondItem="hfZ-Td-kGI" secondAttribute="trailing" constant="8" id="qhr-V6-scl"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hfZ-Td-kGI" secondAttribute="bottom" constant="20.5" id="ukb-lh-qvf"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
@@ -63,4 +75,7 @@
             <point key="canvasLocation" x="97" y="71.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="darrow.png" width="264" height="240"/>
+    </resources>
 </document>
