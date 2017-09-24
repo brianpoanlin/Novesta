@@ -52,12 +52,9 @@
 		AF345C311F77451200589180 /* novesta_settings_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C2D1F77450C00589180 /* novesta_settings_logo.png */; };
 		AF345C341F77462F00589180 /* novesta_faceoff_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C321F77462B00589180 /* novesta_faceoff_logo.png */; };
 		AF345C351F77462F00589180 /* novesta_investors_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C331F77462C00589180 /* novesta_investors_logo.png */; };
-<<<<<<< HEAD
 		AF345C391F77556300589180 /* leagueCellTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF345C371F77556300589180 /* leagueCellTVC.xib */; };
 		AF345C3C1F7781E200589180 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF345C3B1F7781E200589180 /* StockViewController.swift */; };
-=======
 		AF345C3A1F77736200589180 /* leagueCellTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF345C371F77556300589180 /* leagueCellTVC.xib */; };
->>>>>>> origin/master
 		EFCD006801C0F3A94402B8AA /* Pods_NovestaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A05AA507C5639E6BB0A0A22 /* Pods_NovestaTests.framework */; };
 /* End PBXBuildFile section */
 
