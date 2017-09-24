@@ -29,6 +29,11 @@ class Market_ViewController: UIViewController, UITableViewDataSource, UITableVie
         self.performSegue(withIdentifier: "market_to_main", sender: nil)
     }
     
+    @IBAction func swiped_left(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "market_to_league", sender: nil)
+
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

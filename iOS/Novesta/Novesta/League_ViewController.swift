@@ -33,8 +33,12 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidAppear(_ animated: Bool) {
         print("screen loaded")
+        cryp_loc_listofusers = []
         self.pullData()
 
+    }
+    @IBAction func swiped_right(_ sender: Any) {
+        self.performSegue(withIdentifier: "league_to_market", sender: nil)
     }
     
     func pullData(){
@@ -57,14 +61,13 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
                             let userName = value.value(forKey: "user_name")!
                             let netWorth = value.value(forKey: "net_worth")!
                             let netGrowth = value.value(forKey: "net_growth")!
-                            
-                            
-                            
+                            let ranking = value.value(forKey: "user_ranking")!
+
                             let leagueMemberData: [String: AnyObject] = ["user_id":indiv as AnyObject,
                                                                         "user_name":userName as AnyObject,
                                                                         "net_worth":netWorth as AnyObject,
                                                                         "net_growth":netGrowth as AnyObject,
-                                                                        "user_ranking":"1" as AnyObject]
+                                                                        "user_ranking":ranking as AnyObject]
                             self.cryp_loc_listofusers.append(leagueMemberData as NSDictionary)
                             print(netGrowth)
                             print(netWorth)

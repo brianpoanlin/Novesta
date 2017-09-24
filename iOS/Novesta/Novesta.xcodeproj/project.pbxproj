@@ -31,7 +31,6 @@
 		AF345C161F76E0A500589180 /* bitconnect.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BFE1F76E08700589180 /* bitconnect.png */; };
 		AF345C171F76E0A500589180 /* ethereum-classic.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BF61F76E03F00589180 /* ethereum-classic.png */; };
 		AF345C181F76E0A500589180 /* ethereum.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BF91F76E03F00589180 /* ethereum.png */; };
-		AF345C191F76E0A500589180 /* iota.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF345BEC1F76E03D00589180 /* iota.jpg */; };
 		AF345C1A1F76E0A500589180 /* lisk.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BF51F76E03F00589180 /* lisk.png */; };
 		AF345C1B1F76E0A500589180 /* litecoin.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BFD1F76E04000589180 /* litecoin.png */; };
 		AF345C1C1F76E0A500589180 /* monero.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BEB1F76E03D00589180 /* monero.png */; };
@@ -52,9 +51,12 @@
 		AF345C311F77451200589180 /* novesta_settings_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C2D1F77450C00589180 /* novesta_settings_logo.png */; };
 		AF345C341F77462F00589180 /* novesta_faceoff_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C321F77462B00589180 /* novesta_faceoff_logo.png */; };
 		AF345C351F77462F00589180 /* novesta_investors_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C331F77462C00589180 /* novesta_investors_logo.png */; };
-		AF345C391F77556300589180 /* leagueCellTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF345C371F77556300589180 /* leagueCellTVC.xib */; };
-		AF345C3C1F7781E200589180 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF345C3B1F7781E200589180 /* StockViewController.swift */; };
 		AF345C3A1F77736200589180 /* leagueCellTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF345C371F77556300589180 /* leagueCellTVC.xib */; };
+		AF345C3C1F7781E200589180 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF345C3B1F7781E200589180 /* StockViewController.swift */; };
+		AFEBF42E1F7789A500F2D9DB /* iota.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF345BEC1F76E03D00589180 /* iota.jpg */; };
+		AFEBF4311F778A2600F2D9DB /* omisego.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF4301F778A2000F2D9DB /* omisego.png */; };
+		AFEBF4331F778A2C00F2D9DB /* iota.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF42F1F778A1600F2D9DB /* iota.png */; };
+		AFEBF4351F778A3800F2D9DB /* steem.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF4341F778A3500F2D9DB /* steem.png */; };
 		EFCD006801C0F3A94402B8AA /* Pods_NovestaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A05AA507C5639E6BB0A0A22 /* Pods_NovestaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +137,9 @@
 		AF345C331F77462C00589180 /* novesta_investors_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_investors_logo.png; path = ../../../../Res/Logo/novesta_investors_logo.png; sourceTree = "<group>"; };
 		AF345C371F77556300589180 /* leagueCellTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = leagueCellTVC.xib; sourceTree = "<group>"; };
 		AF345C3B1F7781E200589180 /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
+		AFEBF42F1F778A1600F2D9DB /* iota.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iota.png; sourceTree = "<group>"; };
+		AFEBF4301F778A2000F2D9DB /* omisego.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = omisego.png; sourceTree = "<group>"; };
+		AFEBF4341F778A3500F2D9DB /* steem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steem.png; sourceTree = "<group>"; };
 		DAA110008354D85870A3A14F /* Pods-NovestaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovestaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NovestaTests/Pods-NovestaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,7 +253,10 @@
 				AF345BFE1F76E08700589180 /* bitconnect.png */,
 				AF345BF61F76E03F00589180 /* ethereum-classic.png */,
 				AF345BF91F76E03F00589180 /* ethereum.png */,
+				AFEBF42F1F778A1600F2D9DB /* iota.png */,
+				AFEBF4341F778A3500F2D9DB /* steem.png */,
 				AF345BEC1F76E03D00589180 /* iota.jpg */,
+				AFEBF4301F778A2000F2D9DB /* omisego.png */,
 				AF345BF51F76E03F00589180 /* lisk.png */,
 				AF345BFD1F76E04000589180 /* litecoin.png */,
 				AF345BEB1F76E03D00589180 /* monero.png */,
@@ -410,6 +418,7 @@
 				AF345C151F76E0A500589180 /* dash.png in Resources */,
 				AF345C2F1F77451200589180 /* novesta_market_logo.png in Resources */,
 				AF345C231F76E0A500589180 /* waves.png in Resources */,
+				AFEBF4351F778A3800F2D9DB /* steem.png in Resources */,
 				AF345C1A1F76E0A500589180 /* lisk.png in Resources */,
 				AF345C211F76E0A500589180 /* stratis.png in Resources */,
 				AF345C3A1F77736200589180 /* leagueCellTVC.xib in Resources */,
@@ -425,17 +434,19 @@
 				AF345C341F77462F00589180 /* novesta_faceoff_logo.png in Resources */,
 				AF345C1F1F76E0A500589180 /* qtum.png in Resources */,
 				AF0A5C651F76AFCA00E808D6 /* Novesta_TableViewCell.xib in Resources */,
+				AFEBF4311F778A2600F2D9DB /* omisego.png in Resources */,
 				AF345C221F76E0A500589180 /* tether.png in Resources */,
 				AF345C171F76E0A500589180 /* ethereum-classic.png in Resources */,
+				AFEBF4331F778A2C00F2D9DB /* iota.png in Resources */,
 				AF345C1E1F76E0A500589180 /* neo.png in Resources */,
 				AF0A5C5D1F76335A00E808D6 /* GoogleService-Info.plist in Resources */,
 				AF345C1B1F76E0A500589180 /* litecoin.png in Resources */,
 				AF0A5C341F7631A300E808D6 /* Assets.xcassets in Resources */,
 				AF345C201F76E0A500589180 /* ripple.png in Resources */,
-				AF345C191F76E0A500589180 /* iota.jpg in Resources */,
 				AF345C121F76E0A500589180 /* ark.png in Resources */,
 				AF345C1C1F76E0A500589180 /* monero.png in Resources */,
 				AF345C1D1F76E0A500589180 /* nem.png in Resources */,
+				AFEBF42E1F7789A500F2D9DB /* iota.jpg in Resources */,
 				AF345C181F76E0A500589180 /* ethereum.png in Resources */,
 				AF0A5C321F7631A300E808D6 /* Main.storyboard in Resources */,
 				AF345C251F76E0A500589180 /* bitcoin.png in Resources */,

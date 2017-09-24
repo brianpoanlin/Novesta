@@ -336,18 +336,25 @@
                         <viewLayoutGuide key="safeArea" id="nnZ-SC-CSN"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="8rT-qr-gMR" appends="YES" id="eZR-DO-sBT"/>
+                            <outletCollection property="gestureRecognizers" destination="pqZ-Ja-bKL" appends="YES" id="ve0-sS-nvC"/>
                         </connections>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="J1h-G2-Kdx" id="mC9-Wl-oVZ"/>
                         <segue destination="Tf3-20-8oj" kind="show" identifier="market_to_main" customClass="Animated" customModule="Novesta" customModuleProvider="target" id="Yoq-bs-PZP"/>
                         <segue destination="ZlQ-JE-aCJ" kind="show" identifier="toInfo" id="GuA-F5-M5f"/>
+                        <segue destination="FPS-K5-3ss" kind="show" identifier="market_to_league" customClass="Animated_Right" customModule="Novesta" customModuleProvider="target" id="KHa-9o-Ch9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Jy-Zb-Ocf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="8rT-qr-gMR">
                     <connections>
                         <action selector="swipeToMain:" destination="tJx-ac-lUT" id="nxO-ES-MLW"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="pqZ-Ja-bKL">
+                    <connections>
+                        <action selector="swiped_left:" destination="tJx-ac-lUT" id="CHW-lm-iEI"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -398,6 +405,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="AET-u1-DHg" firstAttribute="leading" secondItem="t8W-8e-TgX" secondAttribute="leading" constant="10" id="H3s-jN-Jce"/>
                             <constraint firstItem="iq3-Lp-N46" firstAttribute="top" secondItem="36j-t3-uy7" secondAttribute="top" id="OOf-wA-WnO"/>
@@ -408,14 +416,23 @@
                             <constraint firstAttribute="trailing" secondItem="iq3-Lp-N46" secondAttribute="trailing" id="zx6-je-hcK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t8W-8e-TgX"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="TEe-dA-yXv" appends="YES" id="2aP-SQ-AKU"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="kOr-bR-YWG" id="S9c-o4-UdI"/>
+                        <segue destination="tJx-ac-lUT" kind="show" identifier="league_to_market" customClass="Animated" customModule="Novesta" customModuleProvider="target" id="czg-gy-YN9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HqQ-7J-ROu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="TEe-dA-yXv">
+                    <connections>
+                        <action selector="swiped_right:" destination="FPS-K5-3ss" id="01f-6a-aTK"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2836" y="27.436281859070466"/>
+            <point key="canvasLocation" x="2809" y="56"/>
         </scene>
     </scenes>
     <resources>
@@ -425,8 +442,9 @@
         <image name="novesta_portfolio_logo.png" width="1334" height="750"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="47N-l5-DTd"/>
-        <segue reference="kRP-VI-bgh"/>
+        <segue reference="KHa-9o-Ch9"/>
+        <segue reference="czg-gy-YN9"/>
+        <segue reference="Yoq-bs-PZP"/>
         <segue reference="GuA-F5-M5f"/>
     </inferredMetricsTieBreakers>
 </document>

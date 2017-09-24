@@ -25,6 +25,7 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     var cryp_loc_list: [NSDictionary] = []
     var cryp_id_list: [NSDictionary] = []
     var holdInfo = ""
+    var user_cash = 0.0
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var portfolioWorth: UILabel!
@@ -105,6 +106,19 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
                 print("DONE")
             })
 
+        Database.database().reference(withPath: "users").child(universalUserID).observeSingleEvent(of: .value) { (snapshot:DataSnapshot) in
+            
+            if (snapshot.value != nil) {
+                let value: NSDictionary = snapshot.value! as! NSDictionary
+                print(value.value(forKey: "user_name")!)
+                let userName = value.value(forKey: "user_name")!
+                let netWorth = value.value(forKey: "net_worth")!
+                let netGrowth = value.value(forKey: "net_growth")!
+                let userCash = value.value(forKey: "user_cash")! as! Double
+                self.user_cash = userCash
+                print(userCash)
+            }
+        }
 
     }
     
@@ -142,7 +156,7 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var portfolio_netWorth: Double {
         
-        var total = 0.0
+        var total = user_cash
 
         for indiv in self.cryp_loc_list {
             print("RAN")
@@ -162,25 +176,23 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var portfolio_netGrowth: Double {
         
-        var total = 0.0
+        var total = self.portfolio_netWorth / 5000
         
-        for indiv in self.cryp_loc_list {
-            print("RAN_Growth")
-            
-            let double_value = indiv.value(forKey: "price_usd")! as? String
-            let double_quantity = indiv.value(forKey: "user_quantity") as? String
-            let double_growth = indiv.value(forKey: "percent_change_24h") as? String
-            print(double_value!)
-            total += (Double(double_value!)! * Double(double_quantity!)!) / self.portfolio_netWorth * Double(double_growth!)!
-        }
-        
-        total=round(100*total)/100
+        total=round(1000*total)/10-100
         
         return total
     }
     
     func updateWorth (){
         portfolioWorth.text = "$\(String(self.portfolio_netWorth))"
+        
+        if (portfolio_netGrowth < 0.0) {
+            self.portfolioGrowth.textColor = UIColor.red
+        }
+        else{
+            self.portfolioGrowth.textColor = UIColor(red: 72/255, green: 193/255, blue:87/255, alpha:1)
+        }
+        
         portfolioGrowth.text = "\(String(self.portfolio_netGrowth))%"
 
         
