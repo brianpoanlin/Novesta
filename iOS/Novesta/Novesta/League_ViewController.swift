@@ -58,12 +58,16 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
                             let netWorth = value.value(forKey: "net_worth")!
                             let netGrowth = value.value(forKey: "net_growth")!
                             
+                            
+                            
                             let leagueMemberData: [String: AnyObject] = ["user_id":indiv as AnyObject,
                                                                         "user_name":userName as AnyObject,
                                                                         "net_worth":netWorth as AnyObject,
                                                                         "net_growth":netGrowth as AnyObject,
                                                                         "user_ranking":"1" as AnyObject]
                             self.cryp_loc_listofusers.append(leagueMemberData as NSDictionary)
+                            print(netGrowth)
+                            print(netWorth)
                             print("added to array")
                             self.tableView.reloadData()
 
@@ -129,8 +133,8 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.ranking_label.text = currentEvent.value(forKey: "user_ranking") as? String
         cell.username_label.text = currentEvent.value(forKey: "user_name") as? String
-        cell.networth_label.text = currentEvent.value(forKey: "net_worth") as? String
-        cell.netgrowth_label.text = currentEvent.value(forKey: "net_growth") as? String
+        cell.networth_label.text = String(describing:currentEvent.value(forKey: "net_worth")!)
+        cell.netgrowth_label.text = "123"
         cell.flunc_arrow.image = UIImage(named: "uarrow.png")
         cell.backgroundColor = UIColor.clear
         self.tableView.rowHeight = 80.0
