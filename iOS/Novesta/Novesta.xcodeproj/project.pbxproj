@@ -819,9 +819,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F4C283DFC69B7A0D216E8BC /* Pods-Novesta.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G9YM3FZSY3;
+				DEVELOPMENT_TEAM = 86Y7FL28N9;
 				INFOPLIST_FILE = Novesta/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -836,9 +836,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 71CC6D6CDBF950C6529F0DF2 /* Pods-Novesta.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G9YM3FZSY3;
+				DEVELOPMENT_TEAM = 86Y7FL28N9;
 				INFOPLIST_FILE = Novesta/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

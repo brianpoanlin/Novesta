@@ -9,21 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Novesta/League_ViewController.swift"
-<<<<<<< HEAD
-            timestampString = "527926483.493905"
-=======
-            timestampString = "527924992.633003"
->>>>>>> origin/master
+            filePath = "Novesta/FaceOff_ViewController.swift"
+            timestampString = "527944923.735857"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-<<<<<<< HEAD
-            landmarkName = "didReceiveMemoryWarning()"
-=======
-            landmarkName = "pullData()"
->>>>>>> origin/master
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "determineOpp()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -33,17 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Novesta/League_ViewController.swift"
-<<<<<<< HEAD
-            timestampString = "527926483.493993"
-=======
-            timestampString = "527924992.633097"
->>>>>>> origin/master
+            filePath = "Novesta/FaceOff_ViewController.swift"
+            timestampString = "527944923.736013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "pullData()"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "determineOpp()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -53,23 +41,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Novesta/League_ViewController.swift"
-<<<<<<< HEAD
-            timestampString = "527926483.494062"
-=======
-            timestampString = "527924992.633161"
->>>>>>> origin/master
+            filePath = "Novesta/FaceOff_ViewController.swift"
+            timestampString = "527944923.736102"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
             endingLineNumber = "71"
-<<<<<<< HEAD
-            landmarkName = "preferredStatusBarStyle"
-            landmarkType = "24">
-=======
-            landmarkName = "pullData()"
+            landmarkName = "determineOpp()"
             landmarkType = "7">
->>>>>>> origin/master
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -78,23 +57,30 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Novesta/League_ViewController.swift"
-<<<<<<< HEAD
-            timestampString = "527926483.494123"
-=======
-            timestampString = "527924992.63322"
->>>>>>> origin/master
+            filePath = "Novesta/FaceOff_ViewController.swift"
+            timestampString = "527944923.736184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-<<<<<<< HEAD
-            landmarkName = "League_ViewController"
-            landmarkType = "3">
-=======
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "determineOpp()"
             landmarkType = "7">
->>>>>>> origin/master
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Novesta/FaceOff_ViewController.swift"
+            timestampString = "527944923.736265"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "determineOpp()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -260,7 +260,11 @@
                         <viewLayoutGuide key="safeArea" id="6EQ-Cn-34t"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Dgr-7q-9u9" appends="YES" id="Swc-nG-Jow"/>
+<<<<<<< HEAD
                             <outletCollection property="gestureRecognizers" destination="WML-7C-ar7" appends="YES" id="UjI-Rj-Dp4"/>
+=======
+                            <outletCollection property="gestureRecognizers" destination="Pud-kv-H3g" appends="YES" id="voF-ew-z0Q"/>
+>>>>>>> 32cf726bd5c07b376212917d43be27e823218e0e
                         </connections>
                     </view>
                     <connections>
@@ -280,9 +284,15 @@
                         <action selector="swipedDown:" destination="ZlQ-JE-aCJ" id="wtx-v5-0q0"/>
                     </connections>
                 </swipeGestureRecognizer>
+<<<<<<< HEAD
                 <tapGestureRecognizer id="WML-7C-ar7">
                     <connections>
                         <action selector="tapped:" destination="ZlQ-JE-aCJ" id="Yfu-yH-cDR"/>
+=======
+                <tapGestureRecognizer id="Pud-kv-H3g">
+                    <connections>
+                        <action selector="tapped:" destination="ZlQ-JE-aCJ" id="htX-03-lJO"/>
+>>>>>>> 32cf726bd5c07b376212917d43be27e823218e0e
                     </connections>
                 </tapGestureRecognizer>
             </objects>

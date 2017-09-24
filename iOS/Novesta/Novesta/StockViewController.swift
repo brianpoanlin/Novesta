@@ -39,6 +39,7 @@ class StockViewController: UIViewController {
     
     @IBAction func swipedDown(_ sender: Any) {
         self.performSegue(withIdentifier: "back", sender: nil);
+        amountIn.resignFirstResponder()
     }
     
     let crypRef = Database.database().reference(withPath: "history_crypto")
@@ -74,6 +75,9 @@ class StockViewController: UIViewController {
         
         let cpuData = LineChartData(dataSet: cpuDataSet)
         stockChart.data = cpuData;
+    }
+    @IBAction func tapped(_ sender: Any) {
+        amountIn.resignFirstResponder()
     }
     
     func setUpChart() {
@@ -262,6 +266,8 @@ class StockViewController: UIViewController {
         amountIn.resignFirstResponder()
         dimmer.alpha = 0;
         subButton.alpha = 0;
+        
+        amountIn.resignFirstResponder()
         
         if(state == 0) {
             if(amountIn.text != "") {
