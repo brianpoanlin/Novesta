@@ -16,6 +16,11 @@ class StockViewController: UIViewController {
     var prices = [Double]()
     @IBOutlet weak var stockChart: LineChartView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceText: UILabel!
+    
+    @IBAction func swipedDown(_ sender: Any) {
+        self.performSegue(withIdentifier: "back", sender: nil);
+    }
     
     let crypRef = Database.database().reference(withPath: "history_crypto")
     
@@ -146,12 +151,16 @@ class StockViewController: UIViewController {
                     self.updateChart()
                     if(i < snapshot.childrenCount - 1) {
                         self.prices.append(Double(value)!);
+                        if( i == snapshot.childrenCount - 2) {
+           
+                            var tmp = String(format: "%.2f", Double(value)!)
+                            self.priceText.text = "$" + tmp
+                        }
                     }
                     i += 1;
                    }
         })
     }
-    
 
     /*
     // MARK: - Navigation
