@@ -76,9 +76,6 @@ class StockViewController: UIViewController {
         let cpuData = LineChartData(dataSet: cpuDataSet)
         stockChart.data = cpuData;
     }
-    @IBAction func tapped(_ sender: Any) {
-        amountIn.resignFirstResponder()
-    }
     
     func setUpChart() {
         stockChart.gridBackgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)

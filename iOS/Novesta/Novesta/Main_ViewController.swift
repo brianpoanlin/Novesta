@@ -194,13 +194,13 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.portfolioGrowth.textColor = UIColor(red: 72/255, green: 193/255, blue:87/255, alpha:1)
         }
         
-        portfolioGrowth.text = "\(String(self.portfolio_netGrowth))%"
+        portfolioGrowth.text = "\(String(format: "%.2f", Double(self.portfolio_netGrowth)))%"
 
         
         let creationPath = Database.database().reference(withPath: "users").child(universalUserID).child("net_worth")
         creationPath.setValue(self.portfolio_netWorth)
         let creationPath2 = Database.database().reference(withPath: "users").child(universalUserID).child("net_growth")
-        print("NET GROWTH>>>>>>>>> \(self.portfolio_netGrowth)")
+        //print("NET GROWTH>>>>>>>>> \(self.portfolio_netGrowth)")
         creationPath2.setValue(self.portfolio_netGrowth)
     }
     
@@ -241,7 +241,9 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         cell.cryp_name.text = currentEvent.value(forKey: "name") as? String
         cell.cryp_flunc_logo.image = UIImage(named: arrow_dir)
-        cell.cryp_flunc_value.text = "\((currentEvent.value(forKey: "percent_change_24h") as? String)!)%"
+        var t  = currentEvent.value(forKey: "percent_change_24h") as! String
+        var val = String(format: "%.2f", Double(t)!)
+        cell.cryp_flunc_value.text = "\(val)%"
         cell.cryp_logo.image = UIImage(named: "\((currentEvent.value(forKey: "id") as? String)!).png")
         cell.quant.text = currentEvent.value(forKey: "user_quantity") as? String
 
