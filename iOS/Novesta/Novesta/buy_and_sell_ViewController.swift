@@ -12,6 +12,12 @@ import FirebaseAuth
 
 class buy_and_sell_ViewController: UIViewController {
     let crypRef = Database.database().reference(withPath: "master_crypto")
+    var cryp_loc_list: [NSDictionary] = []
+    var cryp_id_list: [NSDictionary] = []
+    
+    @IBOutlet weak var portfolioWorth: UILabel!
+    @IBOutlet weak var portfolioGrowth: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -66,8 +72,6 @@ class buy_and_sell_ViewController: UIViewController {
                             
                             self.cryp_loc_list.append(val as NSDictionary)
                             
-                            self.tableView.reloadData()
-                            
                         }
                         else {
                         }
@@ -78,6 +82,31 @@ class buy_and_sell_ViewController: UIViewController {
                 print("DONE")
             })
         
+        var portfolio_netGrowth: Double {
+            
+            var total = 0.0
+            
+            for indiv in self.cryp_loc_list {
+                print("RAN_Growth")
+                
+                let double_value = indiv.value(forKey: "price_usd")! as? String
+                let double_quantity = indiv.value(forKey: "user_quantity") as? String
+                let double_growth = indiv.value(forKey: "percent_change_24h") as? String
+                print(double_value!)
+                total += (Double(double_value!)! * Double(double_quantity!)!) / self.portfolio_netWorth * Double(double_growth!)!
+            }
+        
+        func updateWorth (){
+            portfolioWorth.text = "$\(String(self.portfolio_netWorth))"
+            portfolioGrowth.text = "\(String(self.portfolio_netGrowth))%"
+            
+            
+            let creationPath = Database.database().reference(withPath: "users").child(universalUserID).child("net_worth")
+            creationPath.setValue(self.portfolio_netWorth)
+            let creationPath2 = Database.database().reference(withPath: "users").child(universalUserID).child("net_growth")
+            print("NET GROWTH>>>>>>>>> \(self.portfolio_netGrowth)")
+            creationPath2.setValue(self.portfolio_netGrowth)
+        }
         
     }
 }
