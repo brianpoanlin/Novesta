@@ -31,7 +31,6 @@
 		AF345C161F76E0A500589180 /* bitconnect.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BFE1F76E08700589180 /* bitconnect.png */; };
 		AF345C171F76E0A500589180 /* ethereum-classic.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BF61F76E03F00589180 /* ethereum-classic.png */; };
 		AF345C181F76E0A500589180 /* ethereum.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BF91F76E03F00589180 /* ethereum.png */; };
-		AF345C191F76E0A500589180 /* iota.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF345BEC1F76E03D00589180 /* iota.jpg */; };
 		AF345C1A1F76E0A500589180 /* lisk.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BF51F76E03F00589180 /* lisk.png */; };
 		AF345C1B1F76E0A500589180 /* litecoin.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BFD1F76E04000589180 /* litecoin.png */; };
 		AF345C1C1F76E0A500589180 /* monero.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BEB1F76E03D00589180 /* monero.png */; };
@@ -47,14 +46,22 @@
 		AF345C271F76E76700589180 /* Animated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF345C261F76E76700589180 /* Animated.swift */; };
 		AF345C291F76E99700589180 /* Animated_Right.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF345C281F76E99700589180 /* Animated_Right.swift */; };
 		AF345C2B1F76FBF400589180 /* League_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF345C2A1F76FBF400589180 /* League_ViewController.swift */; };
-		AF345C2F1F77451200589180 /* novesta_market_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C2E1F77450D00589180 /* novesta_market_logo.png */; };
-		AF345C301F77451200589180 /* novesta_portfolio_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C2C1F77450C00589180 /* novesta_portfolio_logo.png */; };
-		AF345C311F77451200589180 /* novesta_settings_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C2D1F77450C00589180 /* novesta_settings_logo.png */; };
-		AF345C341F77462F00589180 /* novesta_faceoff_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C321F77462B00589180 /* novesta_faceoff_logo.png */; };
-		AF345C351F77462F00589180 /* novesta_investors_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C331F77462C00589180 /* novesta_investors_logo.png */; };
-		AF345C391F77556300589180 /* leagueCellTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF345C371F77556300589180 /* leagueCellTVC.xib */; };
-		AF345C3C1F7781E200589180 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF345C3B1F7781E200589180 /* StockViewController.swift */; };
 		AF345C3A1F77736200589180 /* leagueCellTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF345C371F77556300589180 /* leagueCellTVC.xib */; };
+		AF345C3C1F7781E200589180 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF345C3B1F7781E200589180 /* StockViewController.swift */; };
+		AFEBF4311F778A2600F2D9DB /* omisego.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF4301F778A2000F2D9DB /* omisego.png */; };
+		AFEBF4331F778A2C00F2D9DB /* iota.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF42F1F778A1600F2D9DB /* iota.png */; };
+		AFEBF4351F778A3800F2D9DB /* steem.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF4341F778A3500F2D9DB /* steem.png */; };
+		AFEBF4431F779ACE00F2D9DB /* novesta_dock_faceoff.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF4391F779AA900F2D9DB /* novesta_dock_faceoff.png */; };
+		AFEBF4441F779ACE00F2D9DB /* novesta_dock_investors.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF43B1F779AAA00F2D9DB /* novesta_dock_investors.png */; };
+		AFEBF4451F779ACE00F2D9DB /* novesta_dock_market.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF4371F779AA800F2D9DB /* novesta_dock_market.png */; };
+		AFEBF4461F779ACE00F2D9DB /* novesta_dock_portfolio.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF4411F779AAD00F2D9DB /* novesta_dock_portfolio.png */; };
+		AFEBF4471F779ACE00F2D9DB /* novesta_dock_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF4361F779AA800F2D9DB /* novesta_dock_settings.png */; };
+		AFEBF4481F779ACE00F2D9DB /* novesta_faceoff_header.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF4381F779AA900F2D9DB /* novesta_faceoff_header.png */; };
+		AFEBF4491F779ACE00F2D9DB /* novesta_investors_header.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF43A1F779AAA00F2D9DB /* novesta_investors_header.png */; };
+		AFEBF44A1F779ACE00F2D9DB /* novesta_logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF4421F779AAD00F2D9DB /* novesta_logo2.png */; };
+		AFEBF44B1F779ACE00F2D9DB /* novesta_market_header.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF43E1F779AAB00F2D9DB /* novesta_market_header.png */; };
+		AFEBF44C1F779ACE00F2D9DB /* novesta_portfolio_header.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF43D1F779AAB00F2D9DB /* novesta_portfolio_header.png */; };
+		AFEBF44D1F779ACE00F2D9DB /* novesta_settings_header.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF4401F779AAC00F2D9DB /* novesta_settings_header.png */; };
 		EFCD006801C0F3A94402B8AA /* Pods_NovestaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A05AA507C5639E6BB0A0A22 /* Pods_NovestaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,7 +114,6 @@
 		AF345BE71F76CF9F00589180 /* uarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = uarrow.png; path = ../../../../Res/Logo/uarrow.png; sourceTree = "<group>"; };
 		AF345BE81F76CFA000589180 /* darrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = darrow.png; path = ../../../../Res/Logo/darrow.png; sourceTree = "<group>"; };
 		AF345BEB1F76E03D00589180 /* monero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monero.png; sourceTree = "<group>"; };
-		AF345BEC1F76E03D00589180 /* iota.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iota.jpg; sourceTree = "<group>"; };
 		AF345BED1F76E03E00589180 /* ripple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ripple.png; sourceTree = "<group>"; };
 		AF345BEE1F76E03E00589180 /* waves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waves.png; sourceTree = "<group>"; };
 		AF345BF01F76E03E00589180 /* stratis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stratis.png; sourceTree = "<group>"; };
@@ -128,13 +134,23 @@
 		AF345C261F76E76700589180 /* Animated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animated.swift; sourceTree = "<group>"; };
 		AF345C281F76E99700589180 /* Animated_Right.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animated_Right.swift; sourceTree = "<group>"; };
 		AF345C2A1F76FBF400589180 /* League_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League_ViewController.swift; sourceTree = "<group>"; };
-		AF345C2C1F77450C00589180 /* novesta_portfolio_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_portfolio_logo.png; path = ../../../../Res/Logo/novesta_portfolio_logo.png; sourceTree = "<group>"; };
-		AF345C2D1F77450C00589180 /* novesta_settings_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_settings_logo.png; path = ../../../../Res/Logo/novesta_settings_logo.png; sourceTree = "<group>"; };
-		AF345C2E1F77450D00589180 /* novesta_market_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_market_logo.png; path = ../../../../Res/Logo/novesta_market_logo.png; sourceTree = "<group>"; };
-		AF345C321F77462B00589180 /* novesta_faceoff_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_faceoff_logo.png; path = ../../../../Res/Logo/novesta_faceoff_logo.png; sourceTree = "<group>"; };
-		AF345C331F77462C00589180 /* novesta_investors_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_investors_logo.png; path = ../../../../Res/Logo/novesta_investors_logo.png; sourceTree = "<group>"; };
 		AF345C371F77556300589180 /* leagueCellTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = leagueCellTVC.xib; sourceTree = "<group>"; };
 		AF345C3B1F7781E200589180 /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
+		AFEBF42F1F778A1600F2D9DB /* iota.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iota.png; sourceTree = "<group>"; };
+		AFEBF4301F778A2000F2D9DB /* omisego.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = omisego.png; sourceTree = "<group>"; };
+		AFEBF4341F778A3500F2D9DB /* steem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steem.png; sourceTree = "<group>"; };
+		AFEBF4361F779AA800F2D9DB /* novesta_dock_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_dock_settings.png; path = ../../../../Res/Logo/novesta_dock_settings.png; sourceTree = "<group>"; };
+		AFEBF4371F779AA800F2D9DB /* novesta_dock_market.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_dock_market.png; path = ../../../../Res/Logo/novesta_dock_market.png; sourceTree = "<group>"; };
+		AFEBF4381F779AA900F2D9DB /* novesta_faceoff_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_faceoff_header.png; path = ../../../../Res/Logo/novesta_faceoff_header.png; sourceTree = "<group>"; };
+		AFEBF4391F779AA900F2D9DB /* novesta_dock_faceoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_dock_faceoff.png; path = ../../../../Res/Logo/novesta_dock_faceoff.png; sourceTree = "<group>"; };
+		AFEBF43A1F779AAA00F2D9DB /* novesta_investors_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_investors_header.png; path = ../../../../Res/Logo/novesta_investors_header.png; sourceTree = "<group>"; };
+		AFEBF43B1F779AAA00F2D9DB /* novesta_dock_investors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_dock_investors.png; path = ../../../../Res/Logo/novesta_dock_investors.png; sourceTree = "<group>"; };
+		AFEBF43C1F779AAB00F2D9DB /* novesta_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_logo.png; path = ../../../../Res/Logo/novesta_logo.png; sourceTree = "<group>"; };
+		AFEBF43D1F779AAB00F2D9DB /* novesta_portfolio_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_portfolio_header.png; path = ../../../../Res/Logo/novesta_portfolio_header.png; sourceTree = "<group>"; };
+		AFEBF43E1F779AAB00F2D9DB /* novesta_market_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_market_header.png; path = ../../../../Res/Logo/novesta_market_header.png; sourceTree = "<group>"; };
+		AFEBF4401F779AAC00F2D9DB /* novesta_settings_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_settings_header.png; path = ../../../../Res/Logo/novesta_settings_header.png; sourceTree = "<group>"; };
+		AFEBF4411F779AAD00F2D9DB /* novesta_dock_portfolio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_dock_portfolio.png; path = ../../../../Res/Logo/novesta_dock_portfolio.png; sourceTree = "<group>"; };
+		AFEBF4421F779AAD00F2D9DB /* novesta_logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_logo2.png; path = ../../../../Res/Logo/novesta_logo2.png; sourceTree = "<group>"; };
 		DAA110008354D85870A3A14F /* Pods-NovestaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovestaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NovestaTests/Pods-NovestaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,11 +248,18 @@
 		AF0A5C661F76BB7600E808D6 /* img_res */ = {
 			isa = PBXGroup;
 			children = (
-				AF345C321F77462B00589180 /* novesta_faceoff_logo.png */,
-				AF345C331F77462C00589180 /* novesta_investors_logo.png */,
-				AF345C2E1F77450D00589180 /* novesta_market_logo.png */,
-				AF345C2C1F77450C00589180 /* novesta_portfolio_logo.png */,
-				AF345C2D1F77450C00589180 /* novesta_settings_logo.png */,
+				AFEBF4391F779AA900F2D9DB /* novesta_dock_faceoff.png */,
+				AFEBF43B1F779AAA00F2D9DB /* novesta_dock_investors.png */,
+				AFEBF4371F779AA800F2D9DB /* novesta_dock_market.png */,
+				AFEBF4411F779AAD00F2D9DB /* novesta_dock_portfolio.png */,
+				AFEBF4361F779AA800F2D9DB /* novesta_dock_settings.png */,
+				AFEBF4381F779AA900F2D9DB /* novesta_faceoff_header.png */,
+				AFEBF43A1F779AAA00F2D9DB /* novesta_investors_header.png */,
+				AFEBF43C1F779AAB00F2D9DB /* novesta_logo.png */,
+				AFEBF4421F779AAD00F2D9DB /* novesta_logo2.png */,
+				AFEBF43E1F779AAB00F2D9DB /* novesta_market_header.png */,
+				AFEBF43D1F779AAB00F2D9DB /* novesta_portfolio_header.png */,
+				AFEBF4401F779AAC00F2D9DB /* novesta_settings_header.png */,
 				AF345BE81F76CFA000589180 /* darrow.png */,
 				AF345BE71F76CF9F00589180 /* uarrow.png */,
 				AF345BE31F76CBE900589180 /* novesta_logo_highquality.png */,
@@ -248,7 +271,9 @@
 				AF345BFE1F76E08700589180 /* bitconnect.png */,
 				AF345BF61F76E03F00589180 /* ethereum-classic.png */,
 				AF345BF91F76E03F00589180 /* ethereum.png */,
-				AF345BEC1F76E03D00589180 /* iota.jpg */,
+				AFEBF42F1F778A1600F2D9DB /* iota.png */,
+				AFEBF4341F778A3500F2D9DB /* steem.png */,
+				AFEBF4301F778A2000F2D9DB /* omisego.png */,
 				AF345BF51F76E03F00589180 /* lisk.png */,
 				AF345BFD1F76E04000589180 /* litecoin.png */,
 				AF345BEB1F76E03D00589180 /* monero.png */,
@@ -404,41 +429,49 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF345C301F77451200589180 /* novesta_portfolio_logo.png in Resources */,
+				AFEBF4471F779ACE00F2D9DB /* novesta_dock_settings.png in Resources */,
 				AF345BE91F76D15A00589180 /* darrow.png in Resources */,
 				AF345C241F76E0A500589180 /* zcash.png in Resources */,
 				AF345C151F76E0A500589180 /* dash.png in Resources */,
-				AF345C2F1F77451200589180 /* novesta_market_logo.png in Resources */,
 				AF345C231F76E0A500589180 /* waves.png in Resources */,
+				AFEBF4351F778A3800F2D9DB /* steem.png in Resources */,
 				AF345C1A1F76E0A500589180 /* lisk.png in Resources */,
 				AF345C211F76E0A500589180 /* stratis.png in Resources */,
 				AF345C3A1F77736200589180 /* leagueCellTVC.xib in Resources */,
 				AF345BE01F76C47F00589180 /* novesta_logo.png in Resources */,
-				AF345C351F77462F00589180 /* novesta_investors_logo.png in Resources */,
 				AF345BE41F76CBEC00589180 /* novesta_logo_highquality.png in Resources */,
 				AF345C161F76E0A500589180 /* bitconnect.png in Resources */,
+				AFEBF4491F779ACE00F2D9DB /* novesta_investors_header.png in Resources */,
+				AFEBF44D1F779ACE00F2D9DB /* novesta_settings_header.png in Resources */,
 				AF345BEA1F76D15C00589180 /* uarrow.png in Resources */,
-				AF345C311F77451200589180 /* novesta_settings_logo.png in Resources */,
+				AFEBF44C1F779ACE00F2D9DB /* novesta_portfolio_header.png in Resources */,
+				AFEBF4431F779ACE00F2D9DB /* novesta_dock_faceoff.png in Resources */,
 				AF0A5C371F7631A300E808D6 /* LaunchScreen.storyboard in Resources */,
 				AF345C131F76E0A500589180 /* bitcoin-cash.png in Resources */,
+				AFEBF44B1F779ACE00F2D9DB /* novesta_market_header.png in Resources */,
 				AF345C141F76E0A500589180 /* bitcoin.png in Resources */,
-				AF345C341F77462F00589180 /* novesta_faceoff_logo.png in Resources */,
 				AF345C1F1F76E0A500589180 /* qtum.png in Resources */,
 				AF0A5C651F76AFCA00E808D6 /* Novesta_TableViewCell.xib in Resources */,
+				AFEBF4311F778A2600F2D9DB /* omisego.png in Resources */,
 				AF345C221F76E0A500589180 /* tether.png in Resources */,
 				AF345C171F76E0A500589180 /* ethereum-classic.png in Resources */,
+				AFEBF4331F778A2C00F2D9DB /* iota.png in Resources */,
 				AF345C1E1F76E0A500589180 /* neo.png in Resources */,
 				AF0A5C5D1F76335A00E808D6 /* GoogleService-Info.plist in Resources */,
+				AFEBF4451F779ACE00F2D9DB /* novesta_dock_market.png in Resources */,
 				AF345C1B1F76E0A500589180 /* litecoin.png in Resources */,
 				AF0A5C341F7631A300E808D6 /* Assets.xcassets in Resources */,
 				AF345C201F76E0A500589180 /* ripple.png in Resources */,
-				AF345C191F76E0A500589180 /* iota.jpg in Resources */,
+				AFEBF44A1F779ACE00F2D9DB /* novesta_logo2.png in Resources */,
 				AF345C121F76E0A500589180 /* ark.png in Resources */,
 				AF345C1C1F76E0A500589180 /* monero.png in Resources */,
+				AFEBF4461F779ACE00F2D9DB /* novesta_dock_portfolio.png in Resources */,
 				AF345C1D1F76E0A500589180 /* nem.png in Resources */,
 				AF345C181F76E0A500589180 /* ethereum.png in Resources */,
 				AF0A5C321F7631A300E808D6 /* Main.storyboard in Resources */,
 				AF345C251F76E0A500589180 /* bitcoin.png in Resources */,
+				AFEBF4481F779ACE00F2D9DB /* novesta_faceoff_header.png in Resources */,
+				AFEBF4441F779ACE00F2D9DB /* novesta_dock_investors.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
