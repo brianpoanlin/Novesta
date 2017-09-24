@@ -10,6 +10,7 @@
 		4D0D67660D737D773FF54094 /* Pods_NovestaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B911E795D218EEA336A3CAB /* Pods_NovestaUITests.framework */; };
 		78C343D31F775A0A0030186F /* steem.png in Resources */ = {isa = PBXBuildFile; fileRef = 78C343D21F7759B30030186F /* steem.png */; };
 		78C343D41F775A0F0030186F /* omisego.png in Resources */ = {isa = PBXBuildFile; fileRef = 78C343D11F7759AC0030186F /* omisego.png */; };
+		78C343D61F7762260030186F /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C343D51F7762260030186F /* StockViewController.swift */; };
 		AB2EA97E7551E9C70D14923F /* Pods_Novesta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A426FBEFC7EBD162744E8C39 /* Pods_Novesta.framework */; };
 		AF0A5C2D1F7631A300E808D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A5C2C1F7631A300E808D6 /* AppDelegate.swift */; };
 		AF0A5C321F7631A300E808D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0A5C301F7631A300E808D6 /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 		71CC6D6CDBF950C6529F0DF2 /* Pods-Novesta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Novesta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Novesta/Pods-Novesta.release.xcconfig"; sourceTree = "<group>"; };
 		78C343D11F7759AC0030186F /* omisego.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = omisego.png; sourceTree = "<group>"; };
 		78C343D21F7759B30030186F /* steem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steem.png; sourceTree = "<group>"; };
+		78C343D51F7762260030186F /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
 		9F4C283DFC69B7A0D216E8BC /* Pods-Novesta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Novesta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Novesta/Pods-Novesta.debug.xcconfig"; sourceTree = "<group>"; };
 		A426FBEFC7EBD162744E8C39 /* Pods_Novesta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Novesta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0AD767977EC77989A18745 /* Pods-NovestaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovestaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NovestaTests/Pods-NovestaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				AF0A5C5E1F7633C200E808D6 /* LogIn_ViewController.swift */,
 				AF0A5C601F76ADE800E808D6 /* Main_ViewController.swift */,
 				AF345BE51F76CF0300589180 /* Market_ViewController.swift */,
+				78C343D51F7762260030186F /* StockViewController.swift */,
 				AF0A5C301F7631A300E808D6 /* Main.storyboard */,
 				AF345C2A1F76FBF400589180 /* League_ViewController.swift */,
 				AF345C281F76E99700589180 /* Animated_Right.swift */,
@@ -447,7 +450,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		0A12CAF754BE6CAC79979F93 /* [CP] Embed Pods Frameworks */ = {
@@ -507,7 +510,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		8FD86B36A5CE680E649E334C /* [CP] Check Pods Manifest.lock */ = {
@@ -522,7 +525,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C0BC8738FDACEA3D9E687269 /* [CP] Copy Pods Resources */ = {
@@ -584,6 +587,7 @@
 				AF0A5C5F1F7633C200E808D6 /* LogIn_ViewController.swift in Sources */,
 				AF0A5C2D1F7631A300E808D6 /* AppDelegate.swift in Sources */,
 				AF0A5C611F76ADE800E808D6 /* Main_ViewController.swift in Sources */,
+				78C343D61F7762260030186F /* StockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

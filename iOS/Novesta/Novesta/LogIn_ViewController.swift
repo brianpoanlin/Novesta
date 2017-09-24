@@ -76,7 +76,6 @@ class LogIn_ViewController: UIViewController {
             }
             else{
                 print("sign in failed")
-                
             }
         }
         

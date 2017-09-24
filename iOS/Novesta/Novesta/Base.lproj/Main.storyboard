@@ -94,6 +94,65 @@
             </objects>
             <point key="canvasLocation" x="690" y="30"/>
         </scene>
+        <!--Stock View Controller-->
+        <scene sceneID="jVP-MU-1oA">
+            <objects>
+                <viewController storyboardIdentifier="stockInfo" id="Kk8-LR-DDU" customClass="StockViewController" customModule="Novesta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sA7-Je-qxa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orv-yP-bd7" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="118" width="375" height="199"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bw-Iw-7sb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="novesta_logo_highquality.png" translatesAutoresizingMaskIntoConstraints="NO" id="nDx-Rl-gjg">
+                                        <rect key="frame" x="144" y="26" width="86" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="86" id="0dd-ty-3sC"/>
+                                            <constraint firstAttribute="height" constant="76" id="lho-aE-C9y"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGs-xL-Y9Y">
+                                        <rect key="frame" x="8" y="14" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="Tf3-20-8oj" kind="show" id="uh6-15-kKL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.75686274509999996" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="nDx-Rl-gjg" firstAttribute="top" secondItem="2bw-Iw-7sb" secondAttribute="top" constant="26" id="MoG-yU-SR8"/>
+                                    <constraint firstAttribute="height" constant="110" id="fkK-Sx-tcH"/>
+                                    <constraint firstItem="nDx-Rl-gjg" firstAttribute="centerX" secondItem="2bw-Iw-7sb" secondAttribute="centerX" id="sT6-fG-9L0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2bw-Iw-7sb" firstAttribute="leading" secondItem="orv-yP-bd7" secondAttribute="leading" id="2JX-0a-m6E"/>
+                            <constraint firstAttribute="trailing" secondItem="2bw-Iw-7sb" secondAttribute="trailing" id="Q4d-y3-VtC"/>
+                            <constraint firstItem="2bw-Iw-7sb" firstAttribute="trailing" secondItem="orv-yP-bd7" secondAttribute="trailing" id="ePr-9b-yY1"/>
+                            <constraint firstItem="2bw-Iw-7sb" firstAttribute="leading" secondItem="sA7-Je-qxa" secondAttribute="leading" id="l23-kd-Kg3"/>
+                            <constraint firstItem="orv-yP-bd7" firstAttribute="top" secondItem="2bw-Iw-7sb" secondAttribute="bottom" constant="8" symbolic="YES" id="lkA-gC-4jv"/>
+                            <constraint firstItem="tme-m4-BOA" firstAttribute="bottom" secondItem="orv-yP-bd7" secondAttribute="bottom" constant="350" id="tMm-O7-ARz"/>
+                            <constraint firstItem="2bw-Iw-7sb" firstAttribute="top" secondItem="sA7-Je-qxa" secondAttribute="top" id="wVO-nO-Dsr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tme-m4-BOA"/>
+                    </view>
+                    <connections>
+                        <outlet property="stockChart" destination="orv-yP-bd7" id="OMd-iC-GyF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gi9-iA-ne4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2442" y="-735"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="LQF-AL-kVu">
             <objects>
@@ -187,6 +246,7 @@
                         <outlet property="portfolioWorth" destination="6bZ-G9-7qi" id="tbO-Uj-aLP"/>
                         <outlet property="tableView" destination="p32-6O-TOx" id="fiB-Rr-CEf"/>
                         <segue destination="tJx-ac-lUT" kind="show" identifier="main_to_market" customClass="Animated_Right" customModule="Novesta" customModuleProvider="target" id="47N-l5-DTd"/>
+                        <segue destination="Kk8-LR-DDU" kind="show" identifier="toInfoView" id="QVS-gr-Jg0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Zz-lZ-Uur" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -290,14 +350,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HqQ-7J-ROu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2868" y="28"/>
+            <point key="canvasLocation" x="2689" y="-415"/>
         </scene>
     </scenes>
     <resources>
         <image name="novesta_logo_highquality.png" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TQm-jS-Osv"/>
-        <segue reference="bLU-6p-AUQ"/>
+        <segue reference="47N-l5-DTd"/>
+        <segue reference="uh6-15-kKL"/>
     </inferredMetricsTieBreakers>
 </document>

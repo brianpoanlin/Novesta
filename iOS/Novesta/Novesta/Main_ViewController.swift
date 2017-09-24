@@ -24,6 +24,8 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     let crypRef = Database.database().reference(withPath: "master_crypto")
     var cryp_loc_list: [NSDictionary] = []
     var cryp_id_list: [NSDictionary] = []
+    
+    var holdInfo : String?;
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var portfolioWorth: UILabel!
@@ -230,13 +232,18 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
         let curr = tableView.cellForRow(at: indexPath) as? cryp_tbl_view_cell;
-        print(curr?.cryp_name.text?.lowercased() as! String)
         
+        holdInfo = curr?.cryp_name.text?.lowercased() as! String
         
+        self.performSegue(withIdentifier: "toInfoView", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewControllerB = segue.destination as? StockViewController {
+            viewControllerB.grab = holdInfo
+        }
+    }
 
 
     /*
