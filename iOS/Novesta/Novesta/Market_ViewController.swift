@@ -23,7 +23,7 @@ class Market_ViewController: UIViewController, UITableViewDataSource, UITableVie
         // Do any additional setup after loading the view.
     }
     @IBAction func swipeToMain(_ sender: Any) {
-        self.populateData()
+//        self.populateData()
 
         self.performSegue(withIdentifier: "market_to_main", sender: nil)
     }
