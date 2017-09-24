@@ -14,6 +14,28 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Buy and sell View Controller-->
+        <scene sceneID="RZA-zk-Cfg">
+            <objects>
+                <viewController id="Aqj-4Y-aiR" customClass="buy_and_sell_ViewController" customModule="Novesta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fad-Gd-Tl2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKk-AX-BKb">
+                                <rect key="frame" x="172" y="533" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Buy" backgroundImage="novesta_market_logo.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="XgB-tC-kOa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4z-cX-Y7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="523" y="-626"/>
+        </scene>
         <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -92,6 +114,7 @@
                         <segue destination="Tf3-20-8oj" kind="show" identifier="toMain" id="bLU-6p-AUQ"/>
                         <segue destination="FPS-K5-3ss" kind="show" identifier="toLeague" id="fLu-J5-N8X"/>
                         <segue destination="tJx-ac-lUT" kind="show" identifier="toMarket" id="TQm-jS-Osv"/>
+                        <segue destination="Aqj-4Y-aiR" kind="show" identifier="toBuy" id="QFt-wE-DgY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -361,7 +384,7 @@
         <image name="novesta_portfolio_logo.png" width="1334" height="750"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="47N-l5-DTd"/>
-        <segue reference="Yoq-bs-PZP"/>
+        <segue reference="TQm-jS-Osv"/>
+        <segue reference="bLU-6p-AUQ"/>
     </inferredMetricsTieBreakers>
 </document>

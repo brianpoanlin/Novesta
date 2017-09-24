@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		387CC1EF1F776B1600C89A79 /* buy_and_sell_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387CC1EE1F776B1600C89A79 /* buy_and_sell_ViewController.swift */; };
 		4D0D67660D737D773FF54094 /* Pods_NovestaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B911E795D218EEA336A3CAB /* Pods_NovestaUITests.framework */; };
 		AB2EA97E7551E9C70D14923F /* Pods_Novesta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A426FBEFC7EBD162744E8C39 /* Pods_Novesta.framework */; };
 		AF0A5C2D1F7631A300E808D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A5C2C1F7631A300E808D6 /* AppDelegate.swift */; };
@@ -26,7 +27,6 @@
 		AF345BEA1F76D15C00589180 /* uarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BE71F76CF9F00589180 /* uarrow.png */; };
 		AF345C121F76E0A500589180 /* ark.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BF11F76E03E00589180 /* ark.png */; };
 		AF345C131F76E0A500589180 /* bitcoin-cash.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BF21F76E03E00589180 /* bitcoin-cash.png */; };
-		AF345C141F76E0A500589180 /* bitcoin.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BFA1F76E03F00589180 /* bitcoin.png */; };
 		AF345C151F76E0A500589180 /* dash.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BFC1F76E04000589180 /* dash.png */; };
 		AF345C161F76E0A500589180 /* bitconnect.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BFE1F76E08700589180 /* bitconnect.png */; };
 		AF345C171F76E0A500589180 /* ethereum-classic.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345BF61F76E03F00589180 /* ethereum-classic.png */; };
@@ -78,6 +78,7 @@
 		0B911E795D218EEA336A3CAB /* Pods_NovestaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NovestaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC44E1E6B330163361C180A /* Pods-NovestaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovestaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NovestaUITests/Pods-NovestaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1FF7B08897AF07BFB97A194D /* Pods-NovestaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovestaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NovestaUITests/Pods-NovestaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		387CC1EE1F776B1600C89A79 /* buy_and_sell_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buy_and_sell_ViewController.swift; sourceTree = "<group>"; };
 		71CC6D6CDBF950C6529F0DF2 /* Pods-Novesta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Novesta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Novesta/Pods-Novesta.release.xcconfig"; sourceTree = "<group>"; };
 		9F4C283DFC69B7A0D216E8BC /* Pods-Novesta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Novesta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Novesta/Pods-Novesta.debug.xcconfig"; sourceTree = "<group>"; };
 		A426FBEFC7EBD162744E8C39 /* Pods_Novesta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Novesta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,7 +119,6 @@
 		AF345BF71F76E03F00589180 /* neo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = neo.png; sourceTree = "<group>"; };
 		AF345BF81F76E03F00589180 /* qtum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qtum.png; sourceTree = "<group>"; };
 		AF345BF91F76E03F00589180 /* ethereum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ethereum.png; sourceTree = "<group>"; };
-		AF345BFA1F76E03F00589180 /* bitcoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bitcoin.png; path = "../../../../../../Library/Messages/Attachments/fd/13/CFB3C946-142A-4AAA-9632-19018DCE6BFA/Archive/bitcoin.png"; sourceTree = "<group>"; };
 		AF345BFB1F76E03F00589180 /* nem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nem.png; sourceTree = "<group>"; };
 		AF345BFC1F76E04000589180 /* dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash.png; sourceTree = "<group>"; };
 		AF345BFD1F76E04000589180 /* litecoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = litecoin.png; sourceTree = "<group>"; };
@@ -194,6 +194,7 @@
 				AF345BE51F76CF0300589180 /* Market_ViewController.swift */,
 				AF345C2A1F76FBF400589180 /* League_ViewController.swift */,
 				AF0A5C301F7631A300E808D6 /* Main.storyboard */,
+				387CC1EE1F776B1600C89A79 /* buy_and_sell_ViewController.swift */,
 				AF345C281F76E99700589180 /* Animated_Right.swift */,
 				AF345C261F76E76700589180 /* Animated.swift */,
 				AF0A5C631F76AFCA00E808D6 /* Novesta_TableViewCell.xib */,
@@ -239,7 +240,6 @@
 				AF345BDF1F76C47B00589180 /* novesta_logo.png */,
 				AF345BF11F76E03E00589180 /* ark.png */,
 				AF345BF21F76E03E00589180 /* bitcoin-cash.png */,
-				AF345BFA1F76E03F00589180 /* bitcoin.png */,
 				AF345BFC1F76E04000589180 /* dash.png */,
 				AF345BFE1F76E08700589180 /* bitconnect.png */,
 				AF345BF61F76E03F00589180 /* ethereum-classic.png */,
@@ -417,7 +417,6 @@
 				AF345C311F77451200589180 /* novesta_settings_logo.png in Resources */,
 				AF0A5C371F7631A300E808D6 /* LaunchScreen.storyboard in Resources */,
 				AF345C131F76E0A500589180 /* bitcoin-cash.png in Resources */,
-				AF345C141F76E0A500589180 /* bitcoin.png in Resources */,
 				AF345C341F77462F00589180 /* novesta_faceoff_logo.png in Resources */,
 				AF345C1F1F76E0A500589180 /* qtum.png in Resources */,
 				AF0A5C651F76AFCA00E808D6 /* Novesta_TableViewCell.xib in Resources */,
@@ -598,6 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF345C271F76E76700589180 /* Animated.swift in Sources */,
+				387CC1EF1F776B1600C89A79 /* buy_and_sell_ViewController.swift in Sources */,
 				AF345C291F76E99700589180 /* Animated_Right.swift in Sources */,
 				AF345BE61F76CF0300589180 /* Market_ViewController.swift in Sources */,
 				AF345C2B1F76FBF400589180 /* League_ViewController.swift in Sources */,
