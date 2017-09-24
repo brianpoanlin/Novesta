@@ -260,6 +260,7 @@
                         <viewLayoutGuide key="safeArea" id="6EQ-Cn-34t"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Dgr-7q-9u9" appends="YES" id="Swc-nG-Jow"/>
+                            <outletCollection property="gestureRecognizers" destination="Pud-kv-H3g" appends="YES" id="voF-ew-z0Q"/>
                         </connections>
                     </view>
                     <connections>
@@ -279,6 +280,11 @@
                         <action selector="swipedDown:" destination="ZlQ-JE-aCJ" id="wtx-v5-0q0"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="Pud-kv-H3g">
+                    <connections>
+                        <action selector="tapped:" destination="ZlQ-JE-aCJ" id="htX-03-lJO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1284" y="-685.00749625187416"/>
         </scene>
