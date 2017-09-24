@@ -19,12 +19,19 @@ class LogIn_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userNameTF.layer.cornerRadius = 5;
+        passwordTF.layer.cornerRadius = 5;
+        signInButton.layer.cornerRadius = 5;
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 //        try! Auth.auth().signOut()
+    }
+    @IBAction func tapped(_ sender: Any) {
+        userNameTF.resignFirstResponder()
+        passwordTF.resignFirstResponder()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         if Auth.auth().currentUser != nil {
             print("user is signed in")
@@ -34,8 +41,7 @@ class LogIn_ViewController: UIViewController {
             
             print(newPth)
             
-            
-            self.performSegue(withIdentifier: "toMain", sender: nil)
+            self.performSegue(withIdentifier: "toLeague", sender: nil)
             
         } else {
             print("user is NOT signed in")
@@ -76,13 +82,10 @@ class LogIn_ViewController: UIViewController {
             }
             else{
                 print("sign in failed")
-                
             }
         }
-        
     }
 
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

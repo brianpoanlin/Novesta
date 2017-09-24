@@ -27,6 +27,7 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var portfolioWorth: UILabel!
+    @IBOutlet weak var portfolioGrowth: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,7 +87,8 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
                                 "price_usd":snapshot.childSnapshot(forPath: "price_usd").value as! String as AnyObject,
                                 "rank":snapshot.childSnapshot(forPath: "rank").value as! String as AnyObject,
                                 "symbol":snapshot.childSnapshot(forPath: "symbol").value as! String as AnyObject,
-                                "total_supply":snapshot.childSnapshot(forPath: "total_supply").value as! String as AnyObject]
+                                "total_supply":snapshot.childSnapshot(forPath: "total_supply").value as! String as AnyObject,
+                                "user_quantity":value["quantity"] as! String as AnyObject]
                             
                             self.cryp_loc_list.append(val as NSDictionary)
                             
@@ -97,16 +99,15 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
                         }
                     }
                     
-                    self.updateWorth()
                 }
+
                 print("DONE")
             })
+
 
     }
     
     func fetchCrypFullData() {
-        
-        print("FETCHING@@@@@@@@@@@@@@@@@")
         
         for ind in self.cryp_id_list {
             Database.database().reference(withPath: "name_crypto").child((ind.value(forKey: "id") as? String)!).observeSingleEvent(of: .value) { (snapshot:DataSnapshot) in
@@ -138,27 +139,6 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
-//    func parsing() {
-//        for child in snapshot.children as? [DataSnapshot] ?? []{
-//            let crypDataSimp: [String: AnyObject] =  [
-//                "24h_volume_usd":child.childSnapshot(forPath: "24h_volume_usd").value as! String as AnyObject,
-//                "available_supply":child.childSnapshot(forPath: "available_supply").value as! String as AnyObject,
-//                "id":child.childSnapshot(forPath: "id").value as! String as AnyObject,
-//                "last_updated":child.childSnapshot(forPath: "last_updated").value as! String as AnyObject,
-//                "market_cap_usd":child.childSnapshot(forPath: "market_cap_usd").value as! String as AnyObject,
-//                "name":child.childSnapshot(forPath: "name").value as! String as AnyObject,
-//                "percent_change_1h":child.childSnapshot(forPath: "percent_change_1h").value as! String as AnyObject,
-//                "percent_change_24h":child.childSnapshot(forPath: "percent_change_24h").value as! String as AnyObject,
-//                "percent_change_7d":child.childSnapshot(forPath: "percent_change_7d").value as! String as AnyObject,
-//                "price_btc":child.childSnapshot(forPath: "price_btc").value as! String as AnyObject,
-//                "price_usd":child.childSnapshot(forPath: "price_usd").value as! String as AnyObject,
-//                "rank":child.childSnapshot(forPath: "rank").value as! String as AnyObject,
-//                "symbol":child.childSnapshot(forPath: "symbol").value as! String as AnyObject,
-//                "total_supply":child.childSnapshot(forPath: "total_supply").value as! String as AnyObject]
-//        })
-//
-//    }
-    
     var portfolio_netWorth: Double {
         
         var total = 0.0
@@ -167,20 +147,47 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
             print("RAN")
 
             let double_value = indiv.value(forKey: "price_usd")! as? String
+            let double_quantity = indiv.value(forKey: "user_quantity") as? String
             print(double_value!)
-            total += Double(double_value!)!
+            total += (Double(double_value!)! * Double(double_quantity!)!)
         }
+        
+        total=round(100*total)/100
+        
+        return total
+    }
+    
+//    sum = sum + ( (quantity * structure) / (portfoliovalue) * growth rate);
+    
+    var portfolio_netGrowth: Double {
+        
+        var total = 0.0
+        
+        for indiv in self.cryp_loc_list {
+            print("RAN_Growth")
+            
+            let double_value = indiv.value(forKey: "price_usd")! as? String
+            let double_quantity = indiv.value(forKey: "user_quantity") as? String
+            let double_growth = indiv.value(forKey: "percent_change_24h") as? String
+            print(double_value!)
+            total += (Double(double_value!)! * Double(double_quantity!)!) / self.portfolio_netWorth * Double(double_growth!)!
+        }
+        
+        total=round(100*total)/100
         
         return total
     }
     
     func updateWorth (){
-        portfolioWorth.text = String(self.portfolio_netWorth)
+        portfolioWorth.text = "$\(String(self.portfolio_netWorth))"
+        portfolioGrowth.text = "\(String(self.portfolio_netGrowth))%"
+
         
         let creationPath = Database.database().reference(withPath: "users").child(universalUserID).child("net_worth")
         creationPath.setValue(self.portfolio_netWorth)
         let creationPath2 = Database.database().reference(withPath: "users").child(universalUserID).child("net_growth")
-        creationPath2.setValue("3.57")
+        print("NET GROWTH>>>>>>>>> \(self.portfolio_netGrowth)")
+        creationPath2.setValue(self.portfolio_netGrowth)
     }
     
     override func didReceiveMemoryWarning() {
@@ -224,6 +231,8 @@ class Main_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.cryp_logo.image = UIImage(named: "\((currentEvent.value(forKey: "id") as? String)!).png")
         cell.backgroundColor = UIColor.clear
         self.tableView.rowHeight = 90.0
+        
+        self.updateWorth()
         
         return cell
     }

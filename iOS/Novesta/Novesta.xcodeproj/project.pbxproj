@@ -47,6 +47,12 @@
 		AF345C271F76E76700589180 /* Animated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF345C261F76E76700589180 /* Animated.swift */; };
 		AF345C291F76E99700589180 /* Animated_Right.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF345C281F76E99700589180 /* Animated_Right.swift */; };
 		AF345C2B1F76FBF400589180 /* League_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF345C2A1F76FBF400589180 /* League_ViewController.swift */; };
+		AF345C2F1F77451200589180 /* novesta_market_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C2E1F77450D00589180 /* novesta_market_logo.png */; };
+		AF345C301F77451200589180 /* novesta_portfolio_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C2C1F77450C00589180 /* novesta_portfolio_logo.png */; };
+		AF345C311F77451200589180 /* novesta_settings_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C2D1F77450C00589180 /* novesta_settings_logo.png */; };
+		AF345C341F77462F00589180 /* novesta_faceoff_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C321F77462B00589180 /* novesta_faceoff_logo.png */; };
+		AF345C351F77462F00589180 /* novesta_investors_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF345C331F77462C00589180 /* novesta_investors_logo.png */; };
+		AF345C391F77556300589180 /* leagueCellTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF345C371F77556300589180 /* leagueCellTVC.xib */; };
 		EFCD006801C0F3A94402B8AA /* Pods_NovestaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A05AA507C5639E6BB0A0A22 /* Pods_NovestaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +126,12 @@
 		AF345C261F76E76700589180 /* Animated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animated.swift; sourceTree = "<group>"; };
 		AF345C281F76E99700589180 /* Animated_Right.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animated_Right.swift; sourceTree = "<group>"; };
 		AF345C2A1F76FBF400589180 /* League_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League_ViewController.swift; sourceTree = "<group>"; };
+		AF345C2C1F77450C00589180 /* novesta_portfolio_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_portfolio_logo.png; path = ../../../../Res/Logo/novesta_portfolio_logo.png; sourceTree = "<group>"; };
+		AF345C2D1F77450C00589180 /* novesta_settings_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_settings_logo.png; path = ../../../../Res/Logo/novesta_settings_logo.png; sourceTree = "<group>"; };
+		AF345C2E1F77450D00589180 /* novesta_market_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_market_logo.png; path = ../../../../Res/Logo/novesta_market_logo.png; sourceTree = "<group>"; };
+		AF345C321F77462B00589180 /* novesta_faceoff_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_faceoff_logo.png; path = ../../../../Res/Logo/novesta_faceoff_logo.png; sourceTree = "<group>"; };
+		AF345C331F77462C00589180 /* novesta_investors_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = novesta_investors_logo.png; path = ../../../../Res/Logo/novesta_investors_logo.png; sourceTree = "<group>"; };
+		AF345C371F77556300589180 /* leagueCellTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = leagueCellTVC.xib; sourceTree = "<group>"; };
 		DAA110008354D85870A3A14F /* Pods-NovestaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovestaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NovestaTests/Pods-NovestaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,11 +192,12 @@
 				AF0A5C5E1F7633C200E808D6 /* LogIn_ViewController.swift */,
 				AF0A5C601F76ADE800E808D6 /* Main_ViewController.swift */,
 				AF345BE51F76CF0300589180 /* Market_ViewController.swift */,
-				AF0A5C301F7631A300E808D6 /* Main.storyboard */,
 				AF345C2A1F76FBF400589180 /* League_ViewController.swift */,
+				AF0A5C301F7631A300E808D6 /* Main.storyboard */,
 				AF345C281F76E99700589180 /* Animated_Right.swift */,
 				AF345C261F76E76700589180 /* Animated.swift */,
 				AF0A5C631F76AFCA00E808D6 /* Novesta_TableViewCell.xib */,
+				AF345C371F77556300589180 /* leagueCellTVC.xib */,
 				AF0A5C331F7631A300E808D6 /* Assets.xcassets */,
 				AF0A5C351F7631A300E808D6 /* LaunchScreen.storyboard */,
 				AF0A5C381F7631A300E808D6 /* Info.plist */,
@@ -215,6 +228,11 @@
 		AF0A5C661F76BB7600E808D6 /* img_res */ = {
 			isa = PBXGroup;
 			children = (
+				AF345C321F77462B00589180 /* novesta_faceoff_logo.png */,
+				AF345C331F77462C00589180 /* novesta_investors_logo.png */,
+				AF345C2E1F77450D00589180 /* novesta_market_logo.png */,
+				AF345C2C1F77450C00589180 /* novesta_portfolio_logo.png */,
+				AF345C2D1F77450C00589180 /* novesta_settings_logo.png */,
 				AF345BE81F76CFA000589180 /* darrow.png */,
 				AF345BE71F76CF9F00589180 /* uarrow.png */,
 				AF345BE31F76CBE900589180 /* novesta_logo_highquality.png */,
@@ -382,19 +400,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF345C301F77451200589180 /* novesta_portfolio_logo.png in Resources */,
 				AF345BE91F76D15A00589180 /* darrow.png in Resources */,
 				AF345C241F76E0A500589180 /* zcash.png in Resources */,
 				AF345C151F76E0A500589180 /* dash.png in Resources */,
+				AF345C2F1F77451200589180 /* novesta_market_logo.png in Resources */,
 				AF345C231F76E0A500589180 /* waves.png in Resources */,
 				AF345C1A1F76E0A500589180 /* lisk.png in Resources */,
 				AF345C211F76E0A500589180 /* stratis.png in Resources */,
+				AF345C391F77556300589180 /* leagueCellTVC.xib in Resources */,
 				AF345BE01F76C47F00589180 /* novesta_logo.png in Resources */,
+				AF345C351F77462F00589180 /* novesta_investors_logo.png in Resources */,
 				AF345BE41F76CBEC00589180 /* novesta_logo_highquality.png in Resources */,
 				AF345C161F76E0A500589180 /* bitconnect.png in Resources */,
 				AF345BEA1F76D15C00589180 /* uarrow.png in Resources */,
+				AF345C311F77451200589180 /* novesta_settings_logo.png in Resources */,
 				AF0A5C371F7631A300E808D6 /* LaunchScreen.storyboard in Resources */,
 				AF345C131F76E0A500589180 /* bitcoin-cash.png in Resources */,
 				AF345C141F76E0A500589180 /* bitcoin.png in Resources */,
+				AF345C341F77462F00589180 /* novesta_faceoff_logo.png in Resources */,
 				AF345C1F1F76E0A500589180 /* qtum.png in Resources */,
 				AF0A5C651F76AFCA00E808D6 /* Novesta_TableViewCell.xib in Resources */,
 				AF345C221F76E0A500589180 /* tether.png in Resources */,
