@@ -5,7 +5,6 @@
 //  Created by Brian Lin on 9/23/17.
 //  Copyright © 2017 Brian Lin. All rights reserved.
 //
-
 import UIKit
 import Firebase
 import FirebaseAuth
@@ -19,7 +18,7 @@ class league_custom_cell: UITableViewCell {
 }
 
 class League_ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     let crypRef = Database.database().reference(withPath: "League")
     var cryp_loc_listofusers: [NSDictionary] = []
     @IBOutlet weak var tableView: UITableView!
@@ -27,7 +26,7 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "leagueCellTVC", bundle: nil), forCellReuseIdentifier: "league")
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -35,7 +34,7 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
         print("screen loaded")
         cryp_loc_listofusers = []
         self.pullData()
-
+        
     }
     @IBAction func swiped_right(_ sender: Any) {
         self.performSegue(withIdentifier: "league_to_market", sender: nil)
@@ -49,41 +48,41 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
                     
                     print(child.childSnapshot(forPath: "members"))
                     let array = child.childSnapshot(forPath: "members").value as! [AnyObject]
-//                    print(array)
+                    //                    print(array)
                     
                     for indiv in array {
-//                        print(Database.database().reference(withPath: "users").child(indiv as! String))
+                        //                        print(Database.database().reference(withPath: "users").child(indiv as! String))
                         Database.database().reference(withPath: "users").child(indiv as! String).observeSingleEvent(of: .value) { (snapshot:DataSnapshot) in
                             
-                        if (snapshot.value != nil) {
-                            let value: NSDictionary = snapshot.value! as! NSDictionary
-                            print(value.value(forKey: "user_name")!)
-                            let userName = value.value(forKey: "user_name")!
-                            let netWorth = value.value(forKey: "net_worth")!
-                            let netGrowth = value.value(forKey: "net_growth")!
-                            let ranking = value.value(forKey: "user_ranking")!
-
-                            let leagueMemberData: [String: AnyObject] = ["user_id":indiv as AnyObject,
-                                                                        "user_name":userName as AnyObject,
-                                                                        "net_worth":netWorth as AnyObject,
-                                                                        "net_growth":netGrowth as AnyObject,
-                                                                        "user_ranking":ranking as AnyObject]
-                            self.cryp_loc_listofusers.append(leagueMemberData as NSDictionary)
-                            print(netGrowth)
-                            print(netWorth)
-                            print("added to array")
-                            self.tableView.reloadData()
-
-                        }
-                        else {
-                            print("ERROR")
-                        }
+                            if (snapshot.value != nil) {
+                                let value: NSDictionary = snapshot.value! as! NSDictionary
+                                print(value.value(forKey: "user_name")!)
+                                let userName = value.value(forKey: "user_name")!
+                                let netWorth = value.value(forKey: "net_worth")!
+                                let netGrowth = value.value(forKey: "net_growth")!
+                                let ranking = value.value(forKey: "user_ranking")!
+                                
+                                let leagueMemberData: [String: AnyObject] = ["user_id":indiv as AnyObject,
+                                                                             "user_name":userName as AnyObject,
+                                                                             "net_worth":netWorth as AnyObject,
+                                                                             "net_growth":netGrowth as AnyObject,
+                                                                             "user_ranking":ranking as AnyObject]
+                                self.cryp_loc_listofusers.append(leagueMemberData as NSDictionary)
+                                print(netGrowth)
+                                print(netWorth)
+                                print("added to array")
+                                self.tableView.reloadData()
+                                
+                            }
+                            else {
+                                print("ERROR")
+                            }
                         }
                     }
                     
                     
                     print("DONE")
-
+                    
                 }
             })
     }
@@ -91,7 +90,7 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
+    
     func setUpDataBase() {
         let creationPath = Database.database().reference(withPath: "League").childByAutoId().child("members")
         creationPath.setValue(["nEX7BzN584adgw8Z1plmxX3mSK53","oldoBu4r0AeadnP8jxKSxvxz39A3"])
@@ -118,21 +117,21 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.selectionStyle = .none
         let currentEvent = cryp_loc_listofusers[indexPath.row]
         
-//        let value_pars = currentEvent.value(forKey: "percent_change_24h") as? String
-//        let value_float = Double(value_pars!)
+        //        let value_pars = currentEvent.value(forKey: "percent_change_24h") as? String
+        //        let value_float = Double(value_pars!)
         
-//        var arrow_dir = ""
-//
-//        if (Double(value_float!) > 0) {
-//            print("POSITIVE CHANGE")
-//            arrow_dir = "uarrow.png"
-//        }
-//        else {
-//            print("NEGATIVE CHANGE")
-//            arrow_dir = "darrow.png"
-//        }
+        //        var arrow_dir = ""
+        //
+        //        if (Double(value_float!) > 0) {
+        //            print("POSITIVE CHANGE")
+        //            arrow_dir = "uarrow.png"
+        //        }
+        //        else {
+        //            print("NEGATIVE CHANGE")
+        //            arrow_dir = "darrow.png"
+        //        }
         
-//        print((currentEvent.value(forKey: "id") as? String)!)
+        //        print((currentEvent.value(forKey: "id") as? String)!)
         
         cell.ranking_label.text = currentEvent.value(forKey: "user_ranking") as? String
         cell.username_label.text = currentEvent.value(forKey: "user_name") as? String
@@ -144,15 +143,14 @@ class League_ViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return cell
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

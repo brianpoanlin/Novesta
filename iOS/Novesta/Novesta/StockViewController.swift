@@ -46,6 +46,7 @@ class StockViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        prices = [Double]()
         nameLabel.text = grab.uppercased() + " (USD)";
         getData()
         setUpChart()
@@ -108,9 +109,10 @@ class StockViewController: UIViewController {
             path = "history_crypto/c1"
             pathData = "name_crypto/" + grab
         }
-        if(grab == "bitcoin cash") {
+        if(grab == "bitcoin cash" || grab == "bitcoin-cash") {
             path = "history_crypto/c2"
             pathData = "name_crypto/bitcoin-cash"
+            grab = "bitcoin-cash"
         }
         if(grab == "ripple") {
             path = "history_crypto/c3"
@@ -136,9 +138,10 @@ class StockViewController: UIViewController {
             path = "history_crypto/c8"
             pathData = "name_crypto/" + grab
         }
-        if(grab == "ethereum classic") {
+        if(grab == "ethereum classic" || grab == "ethereum-classic") {
             path = "history_crypto/c9"
             pathData = "name_crypto/ethereum-classic"
+            grab = "ethereum-classic"
         }
         if(grab == "neo") {
             path = "history_crypto/c10"
